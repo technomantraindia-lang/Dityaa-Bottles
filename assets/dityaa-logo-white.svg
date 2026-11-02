@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoWaterWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#3ec0cf"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="bottleGemWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="bottleDarkWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Icon Mark -->
+  <g transform="translate(6, 5) scale(0.68)">
+    <!-- Swirling Water Splash Waves -->
+    <path d="M58,114 C22,114 6,84 15,54 C22,34 38,22 54,26 C44,36 44,56 56,64 C66,72 76,62 84,52 C94,36 104,46 104,66 C104,96 84,114 58,114 Z" fill="url(#logoWaterWhite)" opacity="0.95"/>
+    <path d="M58,120 C12,120 -5,78 5,42 C10,24 25,12 38,14 C28,27 28,47 42,57 C52,67 62,57 70,44 C82,24 100,30 108,47 C118,67 110,108 74,118 Z" fill="none" stroke="#7dd3fc" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="92" cy="38" r="4.5" fill="#bae6fd" opacity="0.9"/>
+    <circle cx="22" cy="78" r="3.5" fill="#38bdf8" opacity="0.8"/>
+
+    <!-- Central Faceted Bottle Silhouette -->
+    <!-- Cap -->
+    <rect x="47" y="14" width="22" height="7" rx="1.5" fill="#ffffff"/>
+    <rect x="45" y="21" width="26" height="5" rx="1" fill="#7dd3fc"/>
+    <!-- Neck -->
+    <rect x="50" y="26" width="16" height="10" fill="#38bdf8"/>
+    <!-- Faceted Bottle Upper Dome -->
+    <polygon points="50,36 66,36 76,50 40,50" fill="url(#bottleGemWhite)"/>
+    <!-- Bottle Lower Body -->
+    <polygon points="40,50 76,50 76,82 58,95 40,82" fill="url(#bottleDarkWhite)"/>
+    <polygon points="44,52 72,52 72,78 58,88 44,78" fill="url(#bottleGemWhite)" opacity="0.95"/>
+    <polygon points="44,52 58,52 58,88 44,78" fill="#ffffff" opacity="0.4"/>
+  </g>
+
+  <!-- Brand Typography Lockup for Dark Backgrounds -->
+  <g transform="translate(100, 0)">
+    <!-- Main Title -->
+    <text x="0" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="29" font-weight="900" fill="#ffffff" letter-spacing="1.2">DITYAA</text>
+    <text x="122" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="29" font-weight="800" fill="#3ec0cf" letter-spacing="1.2">BOTTLES</text>
+    
+    <!-- Tagline (PDF) -->
+    <text x="1" y="62" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="11" font-weight="600" fill="#7dd3fc" letter-spacing="0.4">Reliable Polymers for Life-Saving Products</text>
+    <!-- Subtitle -->
+    <text x="1" y="77" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="9.5" font-weight="500" fill="#cbd5e1" letter-spacing="0.3">PRIMARY PHARMACEUTICAL PACKAGING • VADODARA</text>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <!-- Ground Shadows -->
+    <radialGradient id="capGroundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#042b4b" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#042b4b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="capContactShadow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#021422" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#042b4b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="capContactShadow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#021422" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#042b4b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- CRC Cap Pharmaceutical Deep Blue / Teal Shading -->
+    <linearGradient id="crcCapBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b2636"/>
+      <stop offset="10%" stop-color="#0c4a6e"/>
+      <stop offset="35%" stop-color="#0284c7"/>
+      <stop offset="55%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+
+    <!-- CRC Cap Top Dome -->
+    <radialGradient id="crcCapTop" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="45%" stop-color="#0284c7"/>
+      <stop offset="90%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </radialGradient>
+
+    <!-- White Ribbed CRC Cap (Secondary) -->
+    <linearGradient id="whiteCapBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="15%" stop-color="#e2e8f0"/>
+      <stop offset="40%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- Transparent Calibrated Measuring Cup -->
+    <linearGradient id="measuringCupGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#f0f9ff" stop-opacity="0.2"/>
+      <stop offset="80%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Ground Shadows -->
+  <ellipse cx="200" cy="455" rx="140" ry="24" fill="url(#capGroundShadow)"/>
+  <ellipse cx="200" cy="442" rx="90" ry="14" fill="url(#capContactShadow1)"/>
+  <ellipse cx="120" cy="275" rx="45" ry="8" fill="url(#capContactShadow2)"/>
+  <ellipse cx="280" cy="265" rx="55" ry="10" fill="url(#capContactShadow2)"/>
+
+  <!-- ==================== BACKGROUND ITEM: TRANSPARENT MEASURING CUP (LEFT) ==================== -->
+  <g transform="translate(-20, -10)">
+    <path d="M 115 155 L 175 155 L 168 215 L 122 215 Z" fill="url(#measuringCupGlass)" stroke="#0284c7" stroke-width="1.2"/>
+    <ellipse cx="145" cy="155" rx="30" ry="4" fill="#ffffff" opacity="0.6"/>
+    <!-- Measuring Graduations -->
+    <g stroke="#0369a1" stroke-width="1" opacity="0.8">
+      <line x1="124" y1="170" x2="136" y2="170"/>
+      <text x="139" y="173" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="700" fill="#0369a1">15 ml</text>
+      <line x1="123" y1="185" x2="134" y2="185"/>
+      <text x="137" y="188" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="700" fill="#0369a1">10 ml</text>
+      <line x1="122.5" y1="200" x2="132" y2="200"/>
+      <text x="135" y="203" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="700" fill="#0369a1">5 ml</text>
+    </g>
+  </g>
+
+  <!-- ==================== BACKGROUND ITEM: OPAQUE WHITE 38MM CRC CAP (RIGHT) ==================== -->
+  <g transform="translate(15, -15)">
+    <ellipse cx="265" cy="180" rx="48" ry="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M 217 180 L 217 225 C 217 238, 313 238, 313 225 L 313 180 Z" fill="url(#whiteCapBody)"/>
+    <ellipse cx="265" cy="225" rx="48" ry="12" fill="#cbd5e1" opacity="0.5"/>
+    <!-- Vertical Ribs -->
+    <g stroke="#94a3b8" stroke-width="1.2" opacity="0.6">
+      <line x1="230" y1="184" x2="230" y2="228"/>
+      <line x1="245" y1="187" x2="245" y2="232"/>
+      <line x1="265" y1="188" x2="265" y2="234"/>
+      <line x1="285" y1="187" x2="285" y2="232"/>
+      <line x1="300" y1="184" x2="300" y2="228"/>
+    </g>
+    <!-- Top Push Down & Turn Icon on White Cap -->
+    <g stroke="#64748b" stroke-width="1.2" fill="none" opacity="0.8">
+      <path d="M 265 174 L 265 186 M 261 182 L 265 186 L 269 182"/>
+      <path d="M 256 181 A 10 5 0 0 1 274 181"/>
+    </g>
+  </g>
+
+  <!-- ==================== FOREGROUND HERO: 28MM/33MM CRC CLOSURE (CYAN/BLUE) ==================== -->
+  <!-- Cap Sidewall -->
+  <path d="M 108 285 L 108 375 C 108 410, 292 410, 292 375 L 292 285 Z" fill="url(#crcCapBody)"/>
+
+  <!-- Cap Lower Lip Shadow -->
+  <ellipse cx="200" cy="375" rx="92" ry="26" fill="#075985" opacity="0.8"/>
+
+  <!-- Cap Top Dome -->
+  <ellipse cx="200" cy="285" rx="92" ry="32" fill="url(#crcCapTop)"/>
+  <ellipse cx="200" cy="283" rx="88" ry="28" fill="url(#crcCapTop)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- Push Down & Turn Pictogram (Embossed on Cap Top) -->
+  <g stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Center Push Down Arrow -->
+    <line x1="200" y1="262" x2="200" y2="288"/>
+    <polyline points="193,281 200,288 207,281"/>
+    <!-- Circular Turn Arrow Arc -->
+    <path d="M 174 274 A 28 13 0 1 0 226 274"/>
+    <polyline points="222,267 228,274 220,279"/>
+  </g>
+
+  <!-- Embossed Lettering -->
+  <text x="200" y="306" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="800" fill="#ffffff" letter-spacing="1.2">PUSH DOWN &amp; TURN</text>
+  <text x="200" y="252" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="700" fill="rgba(255,255,255,0.7)" letter-spacing="1">CLOSE TIGHTLY</text>
+
+  <!-- High-Precision Vertical Knurled Grip Ribs (Highlight & Shadow Pairs) -->
+  <g opacity="0.75">
+    <!-- Rib 1 -->
+    <line x1="124" y1="292" x2="124" y2="376" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="126" y1="292" x2="126" y2="376" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 2 -->
+    <line x1="142" y1="298" x2="142" y2="384" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="144" y1="298" x2="144" y2="384" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 3 -->
+    <line x1="162" y1="304" x2="162" y2="391" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="164" y1="304" x2="164" y2="391" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 4 -->
+    <line x1="182" y1="308" x2="182" y2="396" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="184" y1="308" x2="184" y2="396" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 5 (Center) -->
+    <line x1="200" y1="310" x2="200" y2="398" stroke="#ffffff" stroke-width="2"/>
+    <line x1="202.2" y1="310" x2="202.2" y2="398" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 6 -->
+    <line x1="218" y1="308" x2="218" y2="396" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="220" y1="308" x2="220" y2="396" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 7 -->
+    <line x1="238" y1="304" x2="238" y2="391" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="240" y1="304" x2="240" y2="391" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 8 -->
+    <line x1="258" y1="298" x2="258" y2="384" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="260" y1="298" x2="260" y2="384" stroke="#075985" stroke-width="1.6"/>
+    <!-- Rib 9 -->
+    <line x1="276" y1="292" x2="276" y2="376" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="278" y1="292" x2="278" y2="376" stroke="#075985" stroke-width="1.6"/>
+  </g>
+</svg>

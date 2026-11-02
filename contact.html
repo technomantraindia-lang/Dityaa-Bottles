@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Manufacturing Plants | Dityaa Bottles Vadodara</title>
+  <meta name="description" content="Contact Dityaa Bottles. Head office at Bhayli, Vadodara, and manufacturing plants in Ranoli (Unit 1) and Padra (Unit 2). Call +91 94280 27052 or email dixit@dityaabottles.com.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      padding-block: 5rem;
+    }
+    .contact-form-box {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+    }
+    .location-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .loc-card-interactive {
+      background: var(--bg-slate);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .loc-card-interactive:hover {
+      background: #ffffff;
+      border-color: var(--cyan-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .loc-card-interactive h3 {
+      font-size: 1.15rem;
+      color: var(--navy-deep);
+      margin: 0 0 0.25rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .loc-card-interactive p {
+      font-size: 0.9rem;
+      color: var(--ink-700);
+      margin: 0.5rem 0 1rem 0;
+      line-height: 1.5;
+    }
+    .loc-link-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 950px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+      <!-- Top Announcement & Multi-Facility Contact Bar -->
+  <aside class="topbar" aria-label="Corporate Contacts and Manufacturing Facilities">
+    <div class="shell topbar-inner">
+      <div class="topbar-left">
+        <div class="topbar-unit">
+          <span class="flag india-flag" aria-hidden="true" title="Vadodara, Gujarat, India"></span>
+          <span class="topbar-label">Vadodara HQ &amp; Plants:</span>
+          <span class="topbar-val">Ranoli (Unit-1) &amp; Padra (Unit-2)</span>
+        </div>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <div class="topbar-unit cleanroom-unit">
+          <span class="status-indicator" aria-hidden="true">
+            <span class="status-indicator-dot"></span>
+          </span>
+          <span class="topbar-label">Cleanroom:</span>
+          <span class="topbar-val cleanroom-val">Class 100,000 Certified</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a class="topbar-link" href="tel:+919428027052" title="Call Sales Office">
+          <svg class="topbar-ico phone-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span class="topbar-link-text">+91 94280 27052</span>
+        </a>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <a class="topbar-link" href="mailto:dixit@dityaabottles.com" title="Email Inquiries">
+          <svg class="topbar-ico mail-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <polyline points="3 7 12 13 21 7"/>
+          </svg>
+          <span class="topbar-link-text">dixit@dityaabottles.com</span>
+        </a>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <a class="topbar-wa-btn" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles%20team,%20I%20would%20like%20to%20inquire%20about%20pharmaceutical%20bottles%20and%20containers." target="_blank" rel="noopener" title="Direct WhatsApp Chat">
+          <svg class="topbar-ico wa-ico" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#ffffff" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.735 5.48 2.018 7.788L0 32l8.44-2.016A15.88 15.88 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/>
+            <path fill="#25D366" d="M23.11 20.205c-.372-.187-2.203-1.088-2.546-1.213-.343-.125-.592-.187-.84.187-.248.372-.962 1.213-1.18 1.463-.218.25-.436.281-.808.094-.372-.187-1.57-.578-2.993-1.846-1.106-.985-1.852-2.202-2.07-2.574-.218-.372-.023-.574.163-.759.167-.167.372-.436.559-.654.187-.218.25-.372.375-.622.125-.25.063-.469-.031-.656-.094-.187-.84-2.028-1.152-2.778-.303-.733-.612-.633-.84-.645-.218-.011-.469-.011-.719-.011s-.656.094-.999.469c-.343.375-1.312 1.282-1.312 3.127s1.344 3.626 1.531 3.876c.187.25 2.641 4.032 6.401 5.655 3.596 1.551 4.331 1.244 5.112 1.168.781-.075 2.52-1.03 2.875-2.028.355-.998.355-1.854.25-2.028-.105-.174-.385-.278-.758-.465z"/>
+          </svg>
+          <span class="topbar-wa-text">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Header -->
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Dityaa Bottles Homepage">
+        <img class="brand-logo-image" src="logo/logo.jpeg" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button" aria-expanded="false">
+            Products
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="products.html?cat=pet-bottles">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2h4v4h-4zM8 6h8v15a1 1 0 01-1 1H9a1 1 0 01-1-1V6z"/></svg>
+              </div>
+              <div>
+                <strong>PET Oral Liquid Bottles</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Amber &amp; Clear Syrups</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=hdpe-containers">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="5" width="12" height="16" rx="2"/><rect x="8" y="2" width="8" height="3"/></svg>
+              </div>
+              <div>
+                <strong>HDPE Pill &amp; Tablet Packers</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Moisture Barrier Solid Dosage</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=droppers">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m-4 4h8v8a2 2 0 01-2 2h-4a2 2 0 01-2-2v-8z"/></svg>
+              </div>
+              <div>
+                <strong>Ophthalmic &amp; Droppers</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Calibrated Nozzles &amp; Pipettes</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=caps-closures">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Child-Resistant Caps (CRC)</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Push &amp; Turn Safety Closures</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=jars">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="3"/></svg>
+              </div>
+              <div>
+                <strong>Nutraceutical Jars</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Wide-Mouth Containers</small>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="products.html" style="font-weight:700; color:var(--cyan-primary);">
+              <span>Browse All Packaging Catalog &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="infrastructure.html">Infrastructure</a>
+        <a class="nav-link" href="quality.html">Quality &amp; QA</a>
+        <a class="nav-link" href="index.html#configurator">Packaging Finder</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-cta js-open-quote">
+          Request a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero" style="background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%); color:#fff; padding-block:3.5rem 4rem;">
+      <div class="shell">
+        <span class="section-kicker white">Connect With Us</span>
+        <h1 class="section-title white">Get in Touch with Dityaa Bottles</h1>
+        <p class="section-subtitle white">
+          Whether you need a commercial price quotation, free sample evaluation bottles, or wish to schedule a vendor audit of our cleanrooms in Ranoli or Padra, we are here to support you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Layout -->
+    <div class="shell contact-layout">
+      <!-- Contact Form -->
+      <div>
+        <div class="contact-form-box">
+          <span class="section-kicker">Start a Conversation</span>
+          <h2 style="font-size:1.75rem; color:var(--navy-deep); margin:0.25rem 0 1rem 0;">Request Quotation &amp; Evaluation Samples</h2>
+          <p style="font-size:0.92rem; color:var(--ink-600); margin-bottom:1.75rem;">
+            Fill out this quick specification form. Our commercial sales and packaging engineers will review and send formal pricing, technical drawings, and sample delivery details.
+          </p>
+
+          <form id="contactPageForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cName">Your Name *</label>
+                <input type="text" id="cName" name="name" required placeholder="Dr. / Mr. / Ms. Full Name">
+              </div>
+              <div class="form-group">
+                <label for="cCompany">Pharma / Brand Name *</label>
+                <input type="text" id="cCompany" name="company" required placeholder="Company or Formulation Name">
+              </div>
+              <div class="form-group">
+                <label for="cPhone">Mobile / WhatsApp *</label>
+                <input type="tel" id="cPhone" name="phone" required placeholder="+91 94280 27052">
+              </div>
+              <div class="form-group">
+                <label for="cEmail">Business Email *</label>
+                <input type="email" id="cEmail" name="email" required placeholder="procurement@company.com">
+              </div>
+              <div class="form-group">
+                <label for="cCategory">Packaging Category</label>
+                <select id="cCategory" name="category">
+                  <option value="PET Oral Liquid Bottles">PET Oral Liquid &amp; Syrup Bottles</option>
+                  <option value="HDPE Solid Dosage Packers">HDPE Pill &amp; Tablet Packers</option>
+                  <option value="Child-Resistant Closures (CRC)">Child-Resistant Caps (CRC)</option>
+                  <option value="Ophthalmic & Ear Droppers">Ophthalmic &amp; Ear Droppers</option>
+                  <option value="Nutraceutical Jars">Wide-Mouth Nutraceutical Jars</option>
+                  <option value="Custom Tooling Development">Custom Mould &amp; Tooling Project</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cVolume">Estimated Annual Volume</label>
+                <select id="cVolume" name="volume">
+                  <option value="Free Sample Kit">Free Sample Kit Only</option>
+                  <option value="25,000 - 100,000 Pcs">25,000 - 100,000 Pcs</option>
+                  <option value="100,000 - 500,000 Pcs">100,000 - 500,000 Pcs</option>
+                  <option value="500,000+ Pcs">500,000+ Pcs (Long-term contract)</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="cMessage">Technical Requirements &amp; Queries</label>
+                <textarea id="cMessage" name="message" rows="4" placeholder="Mention target formulation, neck thread requirement, color (Amber/Clear/White), delivery timeline..."></textarea>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+              <button type="submit" class="btn btn-primary" style="flex:1;">
+                Submit Inquiry via Email &rarr;
+              </button>
+              <button type="button" class="btn btn-whatsapp" id="contactWhatsAppBtn">
+                Send via WhatsApp Instant
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Facilities & Location Cards -->
+      <div>
+        <div class="location-cards-stack">
+          <!-- Office Card -->
+          <div class="loc-card-interactive">
+            <h3>
+              Corporate Head Office
+              <span class="topbar-pill" style="color:var(--navy-deep); background:var(--bg-ice); border-color:var(--line-strong);">Bhayli</span>
+            </h3>
+            <p><strong>C-419, Broadway Commercial Hub</strong>, Opposite Bharat Petroleum, Bhayli-391410, Gujarat, India.</p>
+            <div class="loc-link-row">
+              <a href="tel:+919428027052" style="color:var(--cyan-primary); font-weight:600;">📞 +91 94280 27052</a>
+              <a href="mailto:dixit@dityaabottles.com" style="color:var(--cyan-primary); font-weight:600;">✉️ dixit@dityaabottles.com</a>
+            </div>
+          </div>
+
+          <!-- Unit 1 Card -->
+          <div class="loc-card-interactive">
+            <div style="display:flex; gap:1rem; align-items:flex-start;">
+              <img src="assets/infra-ranoli-isbm.jpg" alt="Unit-1 Ranoli Plant" style="width:72px; height:72px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0; border:1px solid var(--line);">
+              <div>
+                <h3 style="margin-top:0;">
+                  Unit-1 Manufacturing Plant
+                  <span class="topbar-pill" style="color:var(--navy-deep); background:var(--bg-ice); border-color:var(--line-strong);">Ranoli</span>
+                </h3>
+                <p><strong>F.G. PATEL ESTATE</strong>, RANOLI, VADODARA, GUJARAT - 391250</p>
+                <div class="loc-link-row">
+                  <span style="color:var(--ink-muted);">PET ISBM Lines • Class 100k Cleanroom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unit 2 Card -->
+          <div class="loc-card-interactive">
+            <div style="display:flex; gap:1rem; align-items:flex-start;">
+              <img src="assets/infra-padra-ebm.jpg" alt="Unit-2 Padra Plant" style="width:72px; height:72px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0; border:1px solid var(--line);">
+              <div>
+                <h3 style="margin-top:0;">
+                  Unit-2 Manufacturing Plant
+                  <span class="topbar-pill" style="color:var(--navy-deep); background:var(--bg-ice); border-color:var(--line-strong);">Padra</span>
+                </h3>
+                <p><strong>At-Po, Mujpur, Ta- Padra.</strong> Dist- Vadodara, Gujarat - 391440</p>
+                <div class="loc-link-row">
+                  <span style="color:var(--ink-muted);">HDPE Moulding • CRC Closures • Droppers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Card -->
+          <div style="background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); color:#ffffff; border-radius:var(--radius-md); padding:1.75rem; border:1px solid rgba(62,192,207,0.3);">
+            <h4 style="margin:0 0 0.5rem 0; color:var(--cyan-vibrant); font-size:1.15rem;">Fast-Track WhatsApp Assistance</h4>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); margin:0 0 1.25rem 0;">
+              Need instant bottle dimension drawings or urgent batch availability? Chat directly with our plant logistics team.
+            </p>
+            <a class="btn btn-whatsapp" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles,%20I%20have%20an%20urgent%20packaging%20requirement." target="_blank" rel="noopener" style="width:100%;">
+              Open WhatsApp Chat (+91 94280 27052)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="shell footer-top">
+      <div class="footer-brand">
+        <a class="footer-brand-logo" href="index.html" aria-label="Dityaa Bottles Homepage">
+          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+        </a>
+        <p class="footer-bio">
+          Precision pharmaceutical packaging manufactured with certified polymers in Vadodara, Gujarat.
+        </p>
+        <div class="footer-contact-direct">
+          <a class="f-contact-link" href="tel:+919428027052">
+            <span class="f-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <span>+91 94280 27052</span>
+          </a>
+          <a class="f-contact-link" href="mailto:dixit@dityaabottles.com">
+            <span class="f-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <span>dixit@dityaabottles.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="infrastructure.html">Infrastructure &amp; Units</a></li>
+          <li><a href="quality.html">Quality &amp; Cleanroom</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Products</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?cat=pet-bottles">PET Bottles</a></li>
+          <li><a href="products.html?cat=hdpe-containers">HDPE Containers</a></li>
+          <li><a href="products.html?cat=droppers">Droppers</a></li>
+          <li><a href="products.html?cat=caps-closures">Caps &amp; Closures</a></li>
+          <li><a href="products.html?cat=jars">Nutraceutical Jars</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Vadodara Facilities</h4>
+        <div class="footer-facilities">
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Head Office</strong><span class="fac-badge">Bhayli</span></div>
+            <p class="fac-text">C-419, Broadway Commercial Hub, Opposite Bharat Petroleum, Bhayli-391410, Gujarat, India.</p>
+          </div>
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Unit-1 Plant</strong><span class="fac-badge">Ranoli</span></div>
+            <p class="fac-text">F.G. PATEL ESTATE, RANOLI, VADODARA, GUJARAT - 391250</p>
+          </div>
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Unit-2 Plant</strong><span class="fac-badge">Padra</span></div>
+            <p class="fac-text">At-Po, Mujpur, Ta- Padra. Dist- Vadodara, Gujarat - 391440</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>&copy; 2026 Dityaa Bottles. All Rights Reserved.</span>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog -->
+  <dialog class="modal" id="quoteModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-close" data-close-modal aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <h3>Request Packaging Quote &amp; Samples</h3>
+        <p>Direct supply from our Vadodara manufacturing plants.</p>
+      </div>
+      <div class="modal-body">
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="quoteName">Contact Name *</label>
+              <input type="text" id="quoteName" name="name" required placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="quoteCompany">Pharma Company *</label>
+              <input type="text" id="quoteCompany" name="company" required placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <label for="quotePhone">Phone / WhatsApp *</label>
+              <input type="tel" id="quotePhone" name="phone" required placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Business Email *</label>
+              <input type="email" id="quoteEmail" name="email" required placeholder="you@pharma.com">
+            </div>
+            <div class="form-group">
+              <label for="quoteProductInput">Product Container</label>
+              <input type="text" id="quoteProductInput" name="product" placeholder="e.g. PET Amber 100ml">
+            </div>
+            <div class="form-group">
+              <label for="quoteQuantity">Quantity</label>
+              <select id="quoteQuantity" name="quantity">
+                <option value="Free Sample Kit">Free Sample Kit Evaluation</option>
+                <option value="10,000 - 50,000 units">10,000 - 50,000 units</option>
+                <option value="50,000 - 200,000 units">50,000 - 200,000 units</option>
+                <option value="200,000+ units">200,000+ units (Bulk Contract)</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="quoteNotes">Technical Specifications</label>
+              <textarea id="quoteNotes" name="notes" rows="3" placeholder="Neck size, fill liquid/solid, induction seal requirements..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="flex:1;">Submit Quotation Request &rarr;</button>
+            <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating Quick-Action CTAs (Call Left & WhatsApp Right) -->
+  <a class="float-call-btn" href="tel:+919428027052" aria-label="Call Dityaa Bottles at +91 94280 27052" title="Call Dityaa Bottles (+91 94280 27052)">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </a>
+
+  <a class="float-whatsapp" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles%20team,%20I%20am%20interested%20in%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp with Dityaa Bottles" title="Chat on WhatsApp (+91 94280 27052)">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#ffffff" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.735 5.48 2.018 7.788L0 32l8.44-2.016A15.88 15.88 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/>
+      <path fill="#25D366" d="M23.11 20.205c-.372-.187-2.203-1.088-2.546-1.213-.343-.125-.592-.187-.84.187-.248.372-.962 1.213-1.18 1.463-.218.25-.436.281-.808.094-.372-.187-1.57-.578-2.993-1.846-1.106-.985-1.852-2.202-2.07-2.574-.218-.372-.023-.574.163-.759.167-.167.372-.436.559-.654.187-.218.25-.372.375-.622.125-.25.063-.469-.031-.656-.094-.187-.84-2.028-1.152-2.778-.303-.733-.612-.633-.84-.645-.218-.011-.469-.011-.719-.011s-.656.094-.999.469c-.343.375-1.312 1.282-1.312 3.127s1.344 3.626 1.531 3.876c.187.25 2.641 4.032 6.401 5.655 3.596 1.551 4.331 1.244 5.112 1.168.781-.075 2.52-1.03 2.875-2.028.355-.998.355-1.854.25-2.028-.105-.174-.385-.278-.758-.465z"/>
+    </svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Specific handler for contact page form
+    const contactForm = document.getElementById("contactPageForm");
+    const waBtn = document.getElementById("contactWhatsAppBtn");
+
+    function getFormValues() {
+      return {
+        name: document.getElementById("cName")?.value || "",
+        company: document.getElementById("cCompany")?.value || "",
+        phone: document.getElementById("cPhone")?.value || "",
+        email: document.getElementById("cEmail")?.value || "",
+        category: document.getElementById("cCategory")?.value || "",
+        volume: document.getElementById("cVolume")?.value || "",
+        msg: document.getElementById("cMessage")?.value || ""
+      };
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const v = getFormValues();
+        showToast("Inquiry received! Our team will contact you shortly.");
+        contactForm.reset();
+      });
+    }
+
+    if (waBtn) {
+      waBtn.addEventListener("click", () => {
+        const v = getFormValues();
+        const text = `*New Contact Enquiry - Dityaa Bottles*\n*Name:* ${v.name || 'Not specified'}\n*Company:* ${v.company || 'Not specified'}\n*Phone:* ${v.phone || 'Not specified'}\n*Email:* ${v.email || 'Not specified'}\n*Category:* ${v.category}\n*Volume:* ${v.volume}\n*Details:* ${v.msg}`;
+        window.open(`https://wa.me/919428027052?text=${encodeURIComponent(text)}`, "_blank");
+      });
+    }
+  </script>
+</body>
+</html>
+

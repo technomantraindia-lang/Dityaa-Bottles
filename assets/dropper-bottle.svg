@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <!-- Ground Shadows -->
+    <radialGradient id="dropGroundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#042b4b" stop-opacity="0.25"/>
+      <stop offset="55%" stop-color="#042b4b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dropContactShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#021422" stop-opacity="0.5"/>
+      <stop offset="65%" stop-color="#042b4b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- White Ophthalmic HDPE Bottle Cylinder Shading -->
+    <linearGradient id="dropBottleShade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="7%" stop-color="#cbd5e1"/>
+      <stop offset="22%" stop-color="#f1f5f9"/>
+      <stop offset="45%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f8fafc"/>
+      <stop offset="90%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- Medical Wave Teal / Aqua Closure Cap -->
+    <linearGradient id="waveTealCap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="12%" stop-color="#0d9488"/>
+      <stop offset="35%" stop-color="#14b8a6"/>
+      <stop offset="60%" stop-color="#2dd4bf"/>
+      <stop offset="85%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+
+    <!-- Cap Dome Tip Highlight -->
+    <linearGradient id="capTipGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="60%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+
+    <!-- Studio Highlight Strip -->
+    <linearGradient id="dropSoftboxLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadows -->
+  <ellipse cx="200" cy="466" rx="80" ry="16" fill="url(#dropGroundShadow)"/>
+  <ellipse cx="200" cy="463" rx="52" ry="8" fill="url(#dropContactShadow)"/>
+
+  <!-- Bottle Body (10ml Ophthalmic Profile) -->
+  <path d="M 148 225 L 148 448 C 148 456, 154 460, 162 460 L 238 460 C 246 460, 252 456, 252 448 L 252 225 Z" fill="url(#dropBottleShade)"/>
+  <!-- Bottle Shoulders -->
+  <path d="M 148 228 C 148 180, 178 168, 184 168 L 216 168 C 222 168, 252 180, 252 228 Z" fill="url(#dropBottleShade)"/>
+
+  <!-- Bottle Neck -->
+  <rect x="182" y="148" width="36" height="22" fill="url(#dropBottleShade)"/>
+
+  <!-- Studio Highlight (Left) -->
+  <rect x="158" y="226" width="12" height="216" rx="6" fill="url(#dropSoftboxLeft)"/>
+  <path d="M 158 226 C 158 190, 176 174, 186 170" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Right Edge Rim -->
+  <rect x="242" y="228" width="5" height="210" rx="2.5" fill="#ffffff" opacity="0.45"/>
+
+  <!-- Calibrated Eye/Ear Drop Icon Indicator -->
+  <g transform="translate(200, 320)">
+    <circle cx="0" cy="0" r="22" fill="#e0f2fe" opacity="0.75"/>
+    <circle cx="0" cy="0" r="17" fill="#bae6fd" opacity="0.5"/>
+    <!-- Precision Drop Shape -->
+    <path d="M 0 -10 C -8 3, -8 11, 0 11 C 8 11, 8 3, 0 -10 Z" fill="#0284c7"/>
+    <ellipse cx="-2" cy="5" rx="2" ry="3.5" fill="#ffffff" opacity="0.7" transform="rotate(-20 -2 5)"/>
+  </g>
+  <text x="200" y="362" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#0369a1" letter-spacing="0.5">10 ml STERILE</text>
+
+  <!-- ==================== OPHTHALMIC TAMPER-EVIDENT DROPPER CAP ==================== -->
+  <!-- Tamper-Evident Breakaway Ring -->
+  <rect x="178" y="148" width="44" height="8" rx="2" fill="url(#waveTealCap)"/>
+  <line x1="178" y1="156" x2="222" y2="156" stroke="#0f766e" stroke-width="1.2"/>
+
+  <!-- Tapered Nozzle Cap Body -->
+  <path d="M 178 146 L 186 64 L 214 64 L 222 146 Z" fill="url(#waveTealCap)"/>
+  <!-- Cap Tip Dome -->
+  <ellipse cx="200" cy="64" rx="14" ry="5.5" fill="url(#capTipGlow)"/>
+
+  <!-- Vertical Micro-Ribs for Easy Dispensing Torque -->
+  <g opacity="0.55">
+    <line x1="187" y1="74" x2="183" y2="140" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="188.5" y1="74" x2="184.5" y2="140" stroke="#0f766e" stroke-width="1"/>
+    <line x1="195" y1="74" x2="193" y2="140" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="196.5" y1="74" x2="194.5" y2="140" stroke="#0f766e" stroke-width="1"/>
+    <line x1="203" y1="74" x2="205" y2="140" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="204.5" y1="74" x2="206.5" y2="140" stroke="#0f766e" stroke-width="1"/>
+    <line x1="211" y1="74" x2="215" y2="140" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="212.5" y1="74" x2="216.5" y2="140" stroke="#0f766e" stroke-width="1"/>
+  </g>
+</svg>

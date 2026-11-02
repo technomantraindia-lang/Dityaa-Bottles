@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <!-- Ground Shadows -->
+    <radialGradient id="jarGroundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#042b4b" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#042b4b" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="jarContactShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#021422" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#042b4b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- White HDPE Cylindrical Shading -->
+    <linearGradient id="jarBodyShade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="8%" stop-color="#cbd5e1"/>
+      <stop offset="25%" stop-color="#f1f5f9"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#f8fafc"/>
+      <stop offset="92%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- 53mm Wide-Mouth Ribbed Cap Shading -->
+    <linearGradient id="jarCapShade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#075985"/>
+      <stop offset="12%" stop-color="#0284c7"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="65%" stop-color="#7dd3fc"/>
+      <stop offset="85%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <!-- Studio Softbox Specular Highlight Strip -->
+    <linearGradient id="jarSoftboxLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadows -->
+  <ellipse cx="200" cy="466" rx="125" ry="20" fill="url(#jarGroundShadow)"/>
+  <ellipse cx="200" cy="463" rx="85" ry="10" fill="url(#jarContactShadow)"/>
+
+  <!-- Main Wide Cylindrical Body (500ml Jar) -->
+  <path d="M 104 176 L 104 448 C 104 456, 112 460, 122 460 L 278 460 C 288 460, 296 456, 296 448 L 296 176 Z" fill="url(#jarBodyShade)"/>
+
+  <!-- Tapered Rounded Shoulder -->
+  <path d="M 104 178 C 104 135, 142 124, 150 124 L 250 124 C 258 124, 296 135, 296 178 Z" fill="url(#jarBodyShade)"/>
+
+  <!-- Wide-Mouth Threaded Neck (53mm) -->
+  <rect x="146" y="86" width="108" height="42" fill="url(#jarBodyShade)"/>
+  <rect x="142" y="118" width="116" height="6" rx="3" fill="#cbd5e1"/>
+
+  <!-- Studio Highlight (Left) -->
+  <rect x="124" y="176" width="18" height="268" rx="9" fill="url(#jarSoftboxLeft)"/>
+  <path d="M 124 176 C 124 145, 146 130, 158 126" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Right Rim Light -->
+  <rect x="282" y="178" width="7" height="262" rx="3.5" fill="#ffffff" opacity="0.45"/>
+
+  <!-- Nutraceutical Quality Embossed Spec Sheet -->
+  <g transform="translate(142, 225)">
+    <rect x="0" y="0" width="116" height="135" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+    <text x="12" y="24" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="800" fill="#0369a1" letter-spacing="0.6">NUTRACEUTICAL</text>
+    <text x="12" y="40" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="600" fill="#64748b">HDPE Wide-Mouth Jar</text>
+    <line x1="12" y1="50" x2="104" y2="50" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <text x="12" y="66" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="600" fill="#0f766e">✓ US FDA 21 CFR</text>
+    <text x="12" y="80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="600" fill="#0f766e">✓ Induction Sealed</text>
+    <text x="12" y="94" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="600" fill="#0f766e">✓ Moisture Barrier</text>
+
+    <!-- Volume Pill Badge -->
+    <rect x="12" y="106" width="86" height="18" rx="4" fill="#e0f2fe"/>
+    <text x="55" y="119" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="800" fill="#0284c7" letter-spacing="0.4">500 ML / 53 MM</text>
+  </g>
+
+  <!-- ==================== 53MM DEEP RIBBED CLOSURE CAP ==================== -->
+  <rect x="136" y="50" width="128" height="42" rx="6" fill="url(#jarCapShade)"/>
+  <!-- Cap Top Bevel -->
+  <rect x="138" y="50" width="124" height="6" rx="3" fill="#7dd3fc" opacity="0.6"/>
+
+  <!-- High-Torque Ribs -->
+  <g opacity="0.65">
+    <line x1="148" y1="58" x2="148" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="150" y1="58" x2="150" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="162" y1="58" x2="162" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="164" y1="58" x2="164" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="176" y1="58" x2="176" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="178" y1="58" x2="178" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="190" y1="58" x2="190" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="192" y1="58" x2="192" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="204" y1="58" x2="204" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="206" y1="58" x2="206" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="218" y1="58" x2="218" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="220" y1="58" x2="220" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="232" y1="58" x2="232" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="234" y1="58" x2="234" y2="88" stroke="#075985" stroke-width="1.4"/>
+    <line x1="246" y1="58" x2="246" y2="88" stroke="#ffffff" stroke-width="1.8"/>
+    <line x1="248" y1="58" x2="248" y2="88" stroke="#075985" stroke-width="1.4"/>
+  </g>
+</svg>

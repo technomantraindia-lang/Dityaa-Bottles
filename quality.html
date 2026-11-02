@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Assurance & Regulatory Compliance | Dityaa Bottles</title>
+  <meta name="description" content="Rigorous pharmacopoeial testing, vacuum leak testing, wall thickness verification, and cleanroom quality compliance at Dityaa Bottles Vadodara.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .quality-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .q-matrix-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      transition: all 0.2s ease;
+    }
+    .q-matrix-card:hover {
+      border-color: var(--cyan-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .q-matrix-card h3 {
+      font-size: 1.15rem;
+      color: var(--navy-deep);
+      margin: 0.75rem 0 0.5rem 0;
+    }
+    .q-matrix-card p {
+      font-size: 0.88rem;
+      color: var(--ink-600);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .compliance-table th {
+      background: var(--navy-deep);
+      color: #ffffff;
+      text-align: left;
+      padding: 1rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .compliance-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.88rem;
+    }
+    @media (max-width: 900px) {
+      .quality-matrix-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+      <!-- Top Announcement & Multi-Facility Contact Bar -->
+  <aside class="topbar" aria-label="Corporate Contacts and Manufacturing Facilities">
+    <div class="shell topbar-inner">
+      <div class="topbar-left">
+        <div class="topbar-unit">
+          <span class="flag india-flag" aria-hidden="true" title="Vadodara, Gujarat, India"></span>
+          <span class="topbar-label">Vadodara HQ &amp; Plants:</span>
+          <span class="topbar-val">Ranoli (Unit-1) &amp; Padra (Unit-2)</span>
+        </div>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <div class="topbar-unit cleanroom-unit">
+          <span class="status-indicator" aria-hidden="true">
+            <span class="status-indicator-dot"></span>
+          </span>
+          <span class="topbar-label">Cleanroom:</span>
+          <span class="topbar-val cleanroom-val">Class 100,000 Certified</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a class="topbar-link" href="tel:+919428027052" title="Call Sales Office">
+          <svg class="topbar-ico phone-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span class="topbar-link-text">+91 94280 27052</span>
+        </a>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <a class="topbar-link" href="mailto:dixit@dityaabottles.com" title="Email Inquiries">
+          <svg class="topbar-ico mail-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <polyline points="3 7 12 13 21 7"/>
+          </svg>
+          <span class="topbar-link-text">dixit@dityaabottles.com</span>
+        </a>
+
+        <span class="topbar-divider" aria-hidden="true"></span>
+
+        <a class="topbar-wa-btn" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles%20team,%20I%20would%20like%20to%20inquire%20about%20pharmaceutical%20bottles%20and%20containers." target="_blank" rel="noopener" title="Direct WhatsApp Chat">
+          <svg class="topbar-ico wa-ico" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#ffffff" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.735 5.48 2.018 7.788L0 32l8.44-2.016A15.88 15.88 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/>
+            <path fill="#25D366" d="M23.11 20.205c-.372-.187-2.203-1.088-2.546-1.213-.343-.125-.592-.187-.84.187-.248.372-.962 1.213-1.18 1.463-.218.25-.436.281-.808.094-.372-.187-1.57-.578-2.993-1.846-1.106-.985-1.852-2.202-2.07-2.574-.218-.372-.023-.574.163-.759.167-.167.372-.436.559-.654.187-.218.25-.372.375-.622.125-.25.063-.469-.031-.656-.094-.187-.84-2.028-1.152-2.778-.303-.733-.612-.633-.84-.645-.218-.011-.469-.011-.719-.011s-.656.094-.999.469c-.343.375-1.312 1.282-1.312 3.127s1.344 3.626 1.531 3.876c.187.25 2.641 4.032 6.401 5.655 3.596 1.551 4.331 1.244 5.112 1.168.781-.075 2.52-1.03 2.875-2.028.355-.998.355-1.854.25-2.028-.105-.174-.385-.278-.758-.465z"/>
+          </svg>
+          <span class="topbar-wa-text">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Header -->
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Dityaa Bottles Homepage">
+        <img class="brand-logo-image" src="logo/logo.jpeg" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About Us</a>
+        
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button" aria-expanded="false">
+            Products
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="products.html?cat=pet-bottles">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2h4v4h-4zM8 6h8v15a1 1 0 01-1 1H9a1 1 0 01-1-1V6z"/></svg>
+              </div>
+              <div>
+                <strong>PET Oral Liquid Bottles</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Amber &amp; Clear Syrups</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=hdpe-containers">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="5" width="12" height="16" rx="2"/><rect x="8" y="2" width="8" height="3"/></svg>
+              </div>
+              <div>
+                <strong>HDPE Pill &amp; Tablet Packers</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Moisture Barrier Solid Dosage</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=droppers">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m-4 4h8v8a2 2 0 01-2 2h-4a2 2 0 01-2-2v-8z"/></svg>
+              </div>
+              <div>
+                <strong>Ophthalmic &amp; Droppers</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Calibrated Nozzles &amp; Pipettes</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=caps-closures">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Child-Resistant Caps (CRC)</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Push &amp; Turn Safety Closures</small>
+              </div>
+            </a>
+            <a class="dropdown-item" href="products.html?cat=jars">
+              <div class="dropdown-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="3"/></svg>
+              </div>
+              <div>
+                <strong>Nutraceutical Jars</strong>
+                <small style="display:block; color:var(--ink-muted); font-size:0.75rem;">Wide-Mouth Containers</small>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="products.html" style="font-weight:700; color:var(--cyan-primary);">
+              <span>Browse All Packaging Catalog &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="infrastructure.html">Infrastructure</a>
+        <a class="nav-link active" href="quality.html">Quality &amp; QA</a>
+        <a class="nav-link" href="index.html#configurator">Packaging Finder</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-cta js-open-quote">
+          Request a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero" style="background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%); color:#fff; padding-block:3.5rem 4rem;">
+      <div class="shell">
+        <span class="section-kicker white">Zero-Defect Commitment</span>
+        <h1 class="section-title white">Quality Assurance &amp; Regulatory Compliance</h1>
+        <p class="section-subtitle white">
+          Our QA protocols are harmonized with global pharmacopoeial monographs (USP, EP, IP). Every batch is accompanied by comprehensive testing documentation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testing Protocol Matrix -->
+    <section style="padding-block:5rem; background:#ffffff;">
+      <div class="shell">
+        <div class="text-center">
+          <span class="section-kicker">Analytical &amp; Physical Inspection</span>
+          <h2 class="section-title">The 6-Stage Quality Testing Protocol</h2>
+          <p class="section-subtitle">
+            Conducted by certified QA technicians using calibrated digital testing apparatus inside our on-site laboratories.
+          </p>
+        </div>
+
+        <!-- On-Site Analytical QA Laboratory Real Photo Showcase -->
+        <div style="margin-top:2.5rem; margin-bottom:3rem; border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
+          <img src="assets/pharma-quality-lab.jpg" alt="Dityaa Bottles On-Site Quality Assurance Laboratory" style="width:100%; height:440px; object-fit:cover; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(11,38,54,0.92) 100%);"></div>
+          <div style="position:absolute; bottom:24px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.25rem;">
+            <div>
+              <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(62,192,207,0.25); border:1px solid rgba(62,192,207,0.5); color:var(--cyan-vibrant); padding:4px 12px; border-radius:999px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px;">
+                <span style="width:6px; height:6px; background:#10b981; border-radius:50%; box-shadow:0 0 6px #10b981;"></span>
+                Certified On-Site QA Laboratory
+              </span>
+              <h3 style="color:#ffffff; margin:0; font-size:1.4rem; font-weight:700;">In-House Analytical &amp; Physical Inspection Station</h3>
+            </div>
+            <div style="background:rgba(11,38,54,0.85); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); padding:8px 16px; border-radius:var(--radius-md); text-align:right;">
+              <span style="font-size:0.72rem; color:rgba(255,255,255,0.7); display:block;">Pharmacopoeial Monograph Testing</span>
+              <strong style="color:var(--cyan-vibrant); font-size:0.95rem;">USP &lt;671&gt; • EP 3.2.2 • IP Harmonized</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="quality-matrix-grid">
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+            </div>
+            <h3>1. Resin Inward Inspection</h3>
+            <p>Every virgin polymer lot is checked for Melt Flow Index (MFI), moisture density, and Certificate of Analysis from prime suppliers.</p>
+          </div>
+
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>2. Ultrasonic Wall Thickness</h3>
+            <p>Non-destructive Magna-Mike thickness gauging verifies consistent barrier thickness around shoulders, corners, and base.</p>
+          </div>
+
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            </div>
+            <h3>3. Vacuum Leak Testing</h3>
+            <p>Bottles sealed with caps and wads are submerged in vacuum desiccators at -550 mmHg for 60 seconds to detect microscopic pinholes.</p>
+          </div>
+
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>4. Torque Measurement</h3>
+            <p>Digital torque gauges test cap application torque, removal torque, and child-resistant push-down override forces.</p>
+          </div>
+
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>5. 1.2M Drop Impact Test</h3>
+            <p>Filled containers undergo standard drop impacts onto concrete from 1.2 meters at diverse angles to verify transit survivability.</p>
+          </div>
+
+          <div class="q-matrix-card">
+            <div class="q-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            </div>
+            <h3>6. Bio-Burden &amp; Particulates</h3>
+            <p>Cleanroom airborne particle counters and liquid particulate rinses guarantee clean, pyrogen-free primary packaging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Standards & Regulatory Compliance Table -->
+    <section style="padding-block:4.5rem; background:var(--bg-slate);">
+      <div class="shell">
+        <div class="text-center">
+          <span class="section-kicker">Regulatory Dossier</span>
+          <h2 class="section-title">Harmonized Regulatory Standards</h2>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table class="compliance-table">
+            <thead>
+              <tr>
+                <th>Standard / Authority</th>
+                <th>Scope of Compliance</th>
+                <th>Material / Application</th>
+                <th>Documentation Provided</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>US FDA 21 CFR 177.1630</strong></td>
+                <td>Polyethylene phthalate polymers for food and drug contact</td>
+                <td>PET Oral Bottles &amp; Preforms</td>
+                <td>Resin Compliance Certificate &amp; Heavy Metal Limits</td>
+              </tr>
+              <tr>
+                <td><strong>US FDA 21 CFR 177.1520</strong></td>
+                <td>Olefin polymers for pharmaceutical containers</td>
+                <td>HDPE Bottles, PP Caps &amp; Closures</td>
+                <td>MFI, Density &amp; Extractables Report</td>
+              </tr>
+              <tr>
+                <td><strong>USP &lt;661.1&gt; &amp; &lt;661.2&gt;</strong></td>
+                <td>Plastic packaging systems and materials of construction</td>
+                <td>All Primary Containers</td>
+                <td>Physicochemical &amp; Biological Reactivity Testing</td>
+              </tr>
+              <tr>
+                <td><strong>ISO 8317 &amp; US 16 CFR § 1700.20</strong></td>
+                <td>Child-resistant packaging test protocols</td>
+                <td>CRC Caps (28mm / 33mm / 38mm)</td>
+                <td>Child Safety Certification Protocol</td>
+              </tr>
+              <tr>
+                <td><strong>ISO 14644-1 Class 8</strong></td>
+                <td>Cleanrooms and associated controlled environments</td>
+                <td>Ranoli &amp; Padra Cleanroom Floors</td>
+                <td>Continuous HEPA Validation &amp; Particle Counts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-banner">
+      <div class="shell cta-inner">
+        <div class="cta-text">
+          <h2>Request Complete Quality Documentation</h2>
+          <p>We provide sample Certificates of Analysis (CoA) and resin compliance packets upon request.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn btn-primary js-open-quote">Request Quality Dossier</button>
+          <a class="btn btn-whatsapp" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles,%20we%20need%20a%20quality%20dossier%20and%20spec%20sheets." target="_blank" rel="noopener">WhatsApp Direct</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="shell footer-top">
+      <div class="footer-brand">
+        <a class="footer-brand-logo" href="index.html" aria-label="Dityaa Bottles Homepage">
+          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+        </a>
+        <p class="footer-bio">
+          Precision pharmaceutical packaging manufactured with certified polymers in Vadodara, Gujarat.
+        </p>
+        <div class="footer-contact-direct">
+          <a class="f-contact-link" href="tel:+919428027052">
+            <span class="f-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <span>+91 94280 27052</span>
+          </a>
+          <a class="f-contact-link" href="mailto:dixit@dityaabottles.com">
+            <span class="f-contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <span>dixit@dityaabottles.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="infrastructure.html">Infrastructure &amp; Units</a></li>
+          <li><a href="quality.html">Quality &amp; Cleanroom</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Products</h4>
+        <ul class="footer-links">
+          <li><a href="products.html?cat=pet-bottles">PET Bottles</a></li>
+          <li><a href="products.html?cat=hdpe-containers">HDPE Containers</a></li>
+          <li><a href="products.html?cat=droppers">Droppers</a></li>
+          <li><a href="products.html?cat=caps-closures">Caps &amp; Closures</a></li>
+          <li><a href="products.html?cat=jars">Nutraceutical Jars</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Vadodara Facilities</h4>
+        <div class="footer-facilities">
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Head Office</strong><span class="fac-badge">Bhayli</span></div>
+            <p class="fac-text">C-419, Broadway Commercial Hub, Opposite Bharat Petroleum, Bhayli-391410, Gujarat, India.</p>
+          </div>
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Unit-1 Plant</strong><span class="fac-badge">Ranoli</span></div>
+            <p class="fac-text">F.G. PATEL ESTATE, RANOLI, VADODARA, GUJARAT - 391250</p>
+          </div>
+          <div class="footer-fac-card">
+            <div class="fac-head"><strong>Unit-2 Plant</strong><span class="fac-badge">Padra</span></div>
+            <p class="fac-text">At-Po, Mujpur, Ta- Padra. Dist- Vadodara, Gujarat - 391440</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>&copy; 2026 Dityaa Bottles. All Rights Reserved.</span>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog -->
+  <dialog class="modal" id="quoteModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-close" data-close-modal aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <h3>Request Packaging Quote &amp; Samples</h3>
+        <p>Direct supply from our Vadodara manufacturing plants.</p>
+      </div>
+      <div class="modal-body">
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="quoteName">Contact Name *</label>
+              <input type="text" id="quoteName" name="name" required placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="quoteCompany">Pharma Company *</label>
+              <input type="text" id="quoteCompany" name="company" required placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <label for="quotePhone">Phone / WhatsApp *</label>
+              <input type="tel" id="quotePhone" name="phone" required placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Business Email *</label>
+              <input type="email" id="quoteEmail" name="email" required placeholder="you@pharma.com">
+            </div>
+            <div class="form-group">
+              <label for="quoteProductInput">Product Container</label>
+              <input type="text" id="quoteProductInput" name="product" placeholder="e.g. PET Amber 100ml">
+            </div>
+            <div class="form-group">
+              <label for="quoteQuantity">Quantity</label>
+              <select id="quoteQuantity" name="quantity">
+                <option value="Free Sample Kit">Free Sample Kit Evaluation</option>
+                <option value="10,000 - 50,000 units">10,000 - 50,000 units</option>
+                <option value="50,000 - 200,000 units">50,000 - 200,000 units</option>
+                <option value="200,000+ units">200,000+ units (Bulk Contract)</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="quoteNotes">Technical Specifications</label>
+              <textarea id="quoteNotes" name="notes" rows="3" placeholder="Neck size, fill liquid/solid, induction seal requirements..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="flex:1;">Submit Quotation Request &rarr;</button>
+            <button type="button" class="btn btn-outline" data-close-modal>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating Quick-Action CTAs (Call Left & WhatsApp Right) -->
+  <a class="float-call-btn" href="tel:+919428027052" aria-label="Call Dityaa Bottles at +91 94280 27052" title="Call Dityaa Bottles (+91 94280 27052)">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </a>
+
+  <a class="float-whatsapp" href="https://wa.me/919428027052?text=Hello%20Dityaa%20Bottles%20team,%20I%20am%20interested%20in%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp with Dityaa Bottles" title="Chat on WhatsApp (+91 94280 27052)">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="#ffffff" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.735 5.48 2.018 7.788L0 32l8.44-2.016A15.88 15.88 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/>
+      <path fill="#25D366" d="M23.11 20.205c-.372-.187-2.203-1.088-2.546-1.213-.343-.125-.592-.187-.84.187-.248.372-.962 1.213-1.18 1.463-.218.25-.436.281-.808.094-.372-.187-1.57-.578-2.993-1.846-1.106-.985-1.852-2.202-2.07-2.574-.218-.372-.023-.574.163-.759.167-.167.372-.436.559-.654.187-.218.25-.372.375-.622.125-.25.063-.469-.031-.656-.094-.187-.84-2.028-1.152-2.778-.303-.733-.612-.633-.84-.645-.218-.011-.469-.011-.719-.011s-.656.094-.999.469c-.343.375-1.312 1.282-1.312 3.127s1.344 3.626 1.531 3.876c.187.25 2.641 4.032 6.401 5.655 3.596 1.551 4.331 1.244 5.112 1.168.781-.075 2.52-1.03 2.875-2.028.355-.998.355-1.854.25-2.028-.105-.174-.385-.278-.758-.465z"/>
+    </svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+

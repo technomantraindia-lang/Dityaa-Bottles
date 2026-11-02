@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062e53"/>
+      <stop offset="100%" stop-color="#021424"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#qBg)"/>
+  
+  <!-- Digital Vacuum Leak Testing Chamber -->
+  <rect x="60" y="80" width="220" height="260" rx="16" fill="#092138" stroke="#0ea5e9" stroke-width="2"/>
+  <circle cx="170" cy="180" r="65" fill="#031525" stroke="#38bdf8" stroke-width="3"/>
+  <!-- Vacuum dial indicator -->
+  <line x1="170" y1="180" x2="200" y2="145" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="170" cy="180" r="8" fill="#ef4444"/>
+  <text x="170" y="270" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">VACUUM LEAK TEST</text>
+  <text x="170" y="290" text-anchor="middle" font-family="monospace" font-size="11" fill="#10b981">-550 mmHg (PASS)</text>
+
+  <!-- Optical Dimension Gauge & Wall Thickness Test -->
+  <rect x="320" y="80" width="220" height="260" rx="16" fill="#092138" stroke="#10b981" stroke-width="2"/>
+  <g transform="translate(360, 100) scale(0.24)">
+    <rect x="130" y="150" width="140" height="280" rx="30" fill="#0284c7" opacity="0.6"/>
+  </g>
+  <!-- Laser Measurement Caliper Lines -->
+  <line x1="340" y1="150" x2="520" y2="150" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="340" y1="200" x2="520" y2="200" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="430" y="270" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#10b981">WALL THICKNESS &amp; NECK</text>
+  <text x="430" y="290" text-anchor="middle" font-family="monospace" font-size="11" fill="#38bdf8">TOLERANCE ±0.05 mm</text>
+</svg>

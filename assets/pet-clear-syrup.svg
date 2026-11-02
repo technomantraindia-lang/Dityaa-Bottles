@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <!-- Ambient & Studio Contact Shadows -->
+    <radialGradient id="groundShadowClear" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#042b4b" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#042b4b" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="contactShadowClear" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#021422" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#042b4b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#042b4b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- High-Clarity Virgin PET Glass-Like Cylinder Shading -->
+    <linearGradient id="petClearWall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.45"/>
+      <stop offset="6%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="15%" stop-color="#e0f2fe" stop-opacity="0.15"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#f8fafc" stop-opacity="0.04"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="85%" stop-color="#e0f2fe" stop-opacity="0.15"/>
+      <stop offset="94%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Translucent Pediatric Syrup Liquid -->
+    <linearGradient id="clearSyrupFluid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.55"/>
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.38"/>
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.22"/>
+      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Studio Softbox Specular Highlight (Left) -->
+    <linearGradient id="clearHighlightLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Calibrated Measuring Cup Overcap -->
+    <linearGradient id="measuringCupWall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="15%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#f0f9ff" stop-opacity="0.25"/>
+      <stop offset="85%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Primary Blue Closure Cap Inside -->
+    <linearGradient id="innerBlueCap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#075985"/>
+      <stop offset="20%" stop-color="#0284c7"/>
+      <stop offset="55%" stop-color="#38bdf8"/>
+      <stop offset="85%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadows -->
+  <ellipse cx="200" cy="466" rx="90" ry="16" fill="url(#groundShadowClear)"/>
+  <ellipse cx="200" cy="463" rx="60" ry="8" fill="url(#contactShadowClear)"/>
+
+  <!-- Bottle Outer Wall Profile -->
+  <path d="M 140 186 L 140 448 C 140 456, 146 460, 154 460 L 246 460 C 254 460, 260 456, 260 448 L 260 186 Z" fill="url(#petClearWall)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+
+  <!-- Inner Liquid Body -->
+  <path d="M 144 260 L 144 445 C 144 452, 149 455, 156 455 L 244 455 C 251 455, 256 452, 256 445 L 256 260 Z" fill="url(#clearSyrupFluid)"/>
+  <ellipse cx="200" cy="260" rx="56" ry="5" fill="#38bdf8" opacity="0.6"/>
+
+  <!-- Smooth Boston Curved Shoulders -->
+  <path d="M 140 188 C 140 132, 174 112, 178 112 L 222 112 C 226 112, 260 132, 260 188 Z" fill="url(#petClearWall)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+
+  <!-- Bottle Neck (Threaded Cylinder) -->
+  <rect x="180" y="74" width="40" height="38" fill="url(#petClearWall)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+  <rect x="178" y="104" width="44" height="6" rx="3" fill="#e0f2fe" opacity="0.7"/>
+
+  <!-- Graduation Marks on Bottle Body -->
+  <g opacity="0.8">
+    <line x1="148" y1="280" x2="164" y2="280" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="168" y="284" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#0284c7">60 ml</text>
+    <line x1="148" y1="320" x2="160" y2="320" stroke="#0284c7" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="168" y="324" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#0284c7">40 ml</text>
+    <line x1="148" y1="360" x2="164" y2="360" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="168" y="364" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#0284c7">20 ml</text>
+  </g>
+
+  <!-- Left Studio Softbox Highlight Strip -->
+  <rect x="152" y="186" width="14" height="254" rx="7" fill="url(#clearHighlightLeft)"/>
+  <path d="M 152 186 C 152 142, 172 122, 184 116" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Right Soft Rim Highlight -->
+  <rect x="248" y="188" width="6" height="245" rx="3" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Bottom Curvature Light Edge -->
+  <path d="M 154 454 C 180 459, 220 459, 246 454" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+  <!-- ==================== CLOSURE & CALIBRATED MEASURING CUP ==================== -->
+  <!-- Inner Screw Cap -->
+  <rect x="176" y="58" width="48" height="22" rx="3" fill="url(#innerBlueCap)"/>
+  <line x1="176" y1="72" x2="224" y2="72" stroke="#0369a1" stroke-width="1.5"/>
+
+  <!-- Transparent Measuring Cup Overcap -->
+  <path d="M 166 32 L 234 32 L 228 78 L 172 78 Z" fill="url(#measuringCupWall)" stroke="#0284c7" stroke-width="1.4"/>
+  <ellipse cx="200" cy="32" rx="34" ry="4" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Embossed Graduations on Measuring Cup -->
+  <g stroke="#0369a1" stroke-width="1.2" opacity="0.85">
+    <line x1="173" y1="42" x2="185" y2="42"/>
+    <text x="188" y="45" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#0369a1">10 ml</text>
+    <line x1="172.5" y1="52" x2="183" y2="52"/>
+    <text x="186" y="55" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#0369a1">5 ml</text>
+    <line x1="172" y1="62" x2="182" y2="62"/>
+    <text x="185" y="65" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#0369a1">2.5 ml</text>
+  </g>
+</svg>
