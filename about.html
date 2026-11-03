@@ -248,51 +248,151 @@
       margin: 0;
     }
 
-    /* Why Choose Us Section */
-    .why-choose-section {
+    /* Strategic Advantages - Split Streamlined Layout (Non-Card) */
+    .advantages-section {
       padding-block: 5.5rem;
       background: #f8fafc;
+      position: relative;
     }
-    .why-choose-grid {
+    .advantages-split-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      margin-top: 3rem;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3.5rem;
+      align-items: flex-start;
     }
-    .why-card {
-      background: #ffffff;
-      border: 1px solid var(--line);
+    .advantages-visual-sticky {
+      position: sticky;
+      top: 100px;
+    }
+    .advantages-img-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(11, 38, 54, 0.12);
+      border: 1px solid rgba(11, 38, 54, 0.08);
+      margin-top: 1.75rem;
+    }
+    .advantages-img-wrap img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .advantages-floating-pill {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(6, 27, 39, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 200, 230, 0.35);
       border-radius: var(--radius-lg);
-      padding: 2rem 1.75rem;
-      box-shadow: 0 4px 15px rgba(11, 38, 54, 0.04);
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      padding: 12px 18px;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
     }
-    .why-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--cyan-primary);
-      box-shadow: 0 12px 24px rgba(11, 38, 54, 0.08);
+    .advantages-pill-stat {
+      text-align: center;
     }
-    .why-card-icon {
-      width: 50px;
-      height: 50px;
+    .advantages-pill-stat strong {
+      display: block;
+      color: var(--cyan-vibrant);
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .advantages-pill-stat span {
+      font-size: 0.68rem;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .advantages-pill-divider {
+      width: 1px;
+      height: 26px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Streamlined Connected Rows (No Cards) */
+    .advantages-stream {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .adv-stream-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.35rem;
+      padding-block: 1.5rem;
+      border-bottom: 1px solid rgba(11, 38, 54, 0.09);
+      position: relative;
+      border-radius: var(--radius-md);
+      padding-inline: 0.85rem;
+      transition: background 0.25s ease, padding-left 0.25s ease;
+    }
+    .adv-stream-item:first-child {
+      padding-top: 0;
+    }
+    .adv-stream-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .adv-stream-item:hover {
+      background: #ffffff;
+      padding-left: 1.25rem;
+      box-shadow: 0 4px 14px rgba(11, 38, 54, 0.03);
+    }
+    .adv-stream-num {
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      background: var(--bg-ice);
+      background: linear-gradient(135deg, rgba(0, 139, 163, 0.1) 0%, rgba(0, 200, 230, 0.06) 100%);
+      border: 1px solid rgba(0, 139, 163, 0.25);
       color: var(--cyan-primary);
+      font-size: 0.95rem;
+      font-weight: 800;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
-    .why-card h3 {
-      font-size: 1.15rem;
+    .adv-stream-body {
+      flex: 1;
+    }
+    .adv-stream-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .adv-stream-title {
+      font-size: 1.12rem;
       font-weight: 700;
       color: var(--navy-deep);
-      margin: 0 0 0.75rem 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .why-card p {
-      font-size: 0.9rem;
+    .adv-stream-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--cyan-primary);
+      background: rgba(0, 139, 163, 0.08);
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+    .adv-stream-desc {
+      font-size: 0.88rem;
       color: var(--ink-600);
-      line-height: 1.6;
+      line-height: 1.65;
       margin: 0;
     }
 
@@ -399,18 +499,23 @@
     @media (max-width: 1024px) {
       .values-grid { grid-template-columns: repeat(3, 1fr); }
       .milestones-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-choose-grid { grid-template-columns: repeat(2, 1fr); }
+      .advantages-split-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .advantages-visual-sticky { position: static; }
       .compliance-items { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
       .mvv-hero-grid { grid-template-columns: 1fr; }
       .values-grid { grid-template-columns: 1fr; }
-      .why-choose-grid { grid-template-columns: 1fr; }
+      .advantages-split-grid { grid-template-columns: 1fr; }
+      .advantages-visual-sticky { position: static; }
       .milestones-grid { grid-template-columns: 1fr; }
       .compliance-items { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 540px) {
+      .advantages-floating-pill { flex-direction: column; gap: 8px; }
+      .advantages-pill-divider { display: none; }
+      .adv-stream-header { flex-direction: column; align-items: flex-start; gap: 4px; }
       .compliance-items { grid-template-columns: 1fr; }
     }
   </style>
@@ -794,89 +899,124 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: Why Leading Pharma Brands Choose Dityaa Bottles -->
-    <section class="why-choose-section" id="why-choose-us">
+    <!-- STRATEGIC ADVANTAGES SECTION (Modern Non-Card Streamlined Split Layout) -->
+    <section class="advantages-section" id="why-choose-us">
       <div class="shell">
-        <div class="text-center" style="max-width:720px; margin:0 auto 2.5rem auto;">
-          <span class="section-kicker">Strategic Advantages</span>
-          <h2 class="section-title">Why Pharmaceutical Manufacturers Choose Dityaa Bottles</h2>
-          <p style="color:var(--ink-muted); font-size:1.02rem; line-height:1.65; margin:0;">
-            Engineered from resin science to cleanroom automation to guarantee drug stability, regulatory compliance, and automated bottling efficiency.
-          </p>
-        </div>
+        <div class="advantages-split-grid">
+          <!-- Left Column: Sticky Narrative & Facility Visual -->
+          <div class="advantages-visual-sticky">
+            <span class="section-kicker">Strategic Advantages</span>
+            <h2 class="section-title" style="margin-bottom: 1rem;">Why Pharmaceutical Manufacturers Choose Dityaa Bottles</h2>
+            <p style="color: var(--ink-600); font-size: 0.98rem; line-height: 1.7; margin: 0 0 1.25rem 0;">
+              Engineered from resin science to cleanroom automation to guarantee drug stability, regulatory compliance, and automated bottling line efficiency.
+            </p>
 
-        <div class="why-choose-grid">
-          <!-- Advantage 1 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
+            <div class="advantages-img-wrap">
+              <img src="assets/pharma-cleanroom-facility.jpg" alt="Dityaa Bottles Certified Cleanroom Packaging Facility" />
+              <div class="advantages-floating-pill">
+                <div class="advantages-pill-stat">
+                  <strong>Class 100K</strong>
+                  <span>ISO Class 8 Cleanrooms</span>
+                </div>
+                <div class="advantages-pill-divider"></div>
+                <div class="advantages-pill-stat">
+                  <strong>100M+</strong>
+                  <span>Annual Containers</span>
+                </div>
+                <div class="advantages-pill-divider"></div>
+                <div class="advantages-pill-stat">
+                  <strong>100% Virgin</strong>
+                  <span>US FDA 21 CFR 177</span>
+                </div>
+              </div>
             </div>
-            <h3>Dual Specialized Plants</h3>
-            <p>Operating two advanced facilities across Vadodara: Unit-1 (Ranoli) for PET ISBM oral liquids and Unit-2 (Padra) for HDPE packers and closures, guaranteeing dual-site supply redundancy.</p>
           </div>
 
-          <!-- Advantage 2 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
-              </svg>
+          <!-- Right Column: Flowing Numbered Stream (Non-Card) -->
+          <div class="advantages-stream">
+            <!-- Item 1 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">01</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">Dual Specialized Facilities</h3>
+                  <span class="adv-stream-tag">Ranoli &amp; Padra Plants</span>
+                </div>
+                <p class="adv-stream-desc">
+                  Operating two dedicated manufacturing plants across Vadodara — Unit-1 (Ranoli) for single-stage Japanese PET ISBM oral liquids and Unit-2 (Padra) for automated HDPE packers and closures, guaranteeing multi-site supply redundancy.
+                </p>
+              </div>
             </div>
-            <h3>Certified Class 100,000 Cleanrooms</h3>
-            <p>Manufacturing within certified ISO Class 8 cleanrooms with 24/7 positive air pressure, HEPA filtration, and automated pneumatic resin feeding to eliminate airborne particulates.</p>
-          </div>
 
-          <!-- Advantage 3 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-              </svg>
+            <!-- Item 2 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">02</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">Certified Class 100,000 Cleanrooms</h3>
+                  <span class="adv-stream-tag">HEPA Filtered Positive Air</span>
+                </div>
+                <p class="adv-stream-desc">
+                  All moulding, trimming, and bagging take place within certified Class 100,000 cleanrooms with continuous positive pressure air circulation and automated pneumatic resin feeding to eliminate airborne particulates and cross-contamination.
+                </p>
+              </div>
             </div>
-            <h3>Japanese Nissei ASB Lines</h3>
-            <p>Single-stage Injection Stretch Blow Moulding (ISBM) machines guarantee exceptional wall thickness distribution, crystal-clear glass-like clarity, and perfect 28mm ROPP neck calibration.</p>
-          </div>
 
-          <!-- Advantage 4 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
+            <!-- Item 3 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">03</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">Japanese Nissei ASB Lines</h3>
+                  <span class="adv-stream-tag">Single-Stage Precision ISBM</span>
+                </div>
+                <p class="adv-stream-desc">
+                  Single-stage Injection Stretch Blow Moulding lines produce preform and container in one continuous thermal cycle, guaranteeing uniform wall thickness distribution, crystal optical transparency, and flawless 28mm neck calibration.
+                </p>
+              </div>
             </div>
-            <h3>USP &lt;671&gt; UV &amp; Moisture Barrier</h3>
-            <p>Certified spectral light-transmission protection (&lt;10% transmission up to 450nm) shielding photosensitive syrups and tonics, plus high moisture vapor barrier HDPE for solid oral doses.</p>
-          </div>
 
-          <!-- Advantage 5 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"/>
-                <polyline points="12 6 12 12 14 14"/>
-              </svg>
+            <!-- Item 4 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">04</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">USP &lt;671&gt; UV &amp; Moisture Barrier</h3>
+                  <span class="adv-stream-tag">Spectral Light Protection</span>
+                </div>
+                <p class="adv-stream-desc">
+                  Certified spectral light transmission protection (&lt;10% transmission up to 450nm) shielding photosensitive syrups and tonics, plus high moisture vapor barrier HDPE for solid oral dosage tablets and capsules.
+                </p>
+              </div>
             </div>
-            <h3>Hermetic Closures &amp; Dosing Cups</h3>
-            <p>Precision-matched child-resistant caps (CRC), tamper-evident pilfer-proof closures, and calibrated dosing cups (2.5ml - 10ml) engineered for flawless sealing without torque jamming.</p>
-          </div>
 
-          <!-- Advantage 6 -->
-          <div class="why-card">
-            <div class="why-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-              </svg>
+            <!-- Item 5 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">05</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">Hermetic Closures &amp; Dosing Cups</h3>
+                  <span class="adv-stream-tag">28mm ROPP, CRC &amp; Cups</span>
+                </div>
+                <p class="adv-stream-desc">
+                  Precision-matched child-resistant caps (CRC), tamper-evident pilfer-proof closures, and calibrated dosing cups (2.5ml - 10ml) engineered for flawless sealing without torque jamming on high-speed automated packaging lines.
+                </p>
+              </div>
             </div>
-            <h3>Complete Audit Dossiers &amp; COA</h3>
-            <p>Every delivery includes lot-specific Certificate of Analysis (COA), migration test certificates, US FDA 21 CFR compliance declarations, and full technical documentation for regulatory audits.</p>
+
+            <!-- Item 6 -->
+            <div class="adv-stream-item">
+              <div class="adv-stream-num">06</div>
+              <div class="adv-stream-body">
+                <div class="adv-stream-header">
+                  <h3 class="adv-stream-title">Complete Audit Dossiers &amp; COA</h3>
+                  <span class="adv-stream-tag">Full Regulatory Traceability</span>
+                </div>
+                <p class="adv-stream-desc">
+                  Every delivery includes lot-specific Certificate of Analysis (COA), migration test certificates, US FDA 21 CFR compliance declarations, and full technical documentation for domestic and international regulatory audits.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
