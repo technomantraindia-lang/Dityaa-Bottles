@@ -11,272 +11,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Uniform Infrastructure Styles */
-    .infra-stats-strip {
-      background: var(--bg-slate);
-      border-bottom: 1px solid var(--line);
-      padding: 2.25rem 0;
-    }
-    .infra-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-    .infra-stat-item {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 2px 8px rgba(11, 38, 54, 0.03);
-      transition: all 0.25s ease;
-    }
-    .infra-stat-item:hover {
-      border-color: var(--cyan-primary);
-      box-shadow: 0 6px 16px rgba(0, 200, 230, 0.15);
-      transform: translateY(-2px);
-    }
-    .infra-stat-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(62,192,207,0.15) 0%, rgba(16,77,105,0.08) 100%);
-      border: 1px solid rgba(62,192,207,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      flex-shrink: 0;
-      transition: all 0.25s ease;
-    }
-    .infra-stat-item:hover .infra-stat-icon {
-      background: var(--navy);
-      color: var(--cyan-vibrant);
-      border-color: var(--cyan-primary);
-    }
-    .infra-stat-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-    .infra-stat-val {
-      display: block;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy-deep);
-      line-height: 1.2;
-    }
-    .infra-stat-lbl {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      margin-top: 2px;
-    }
-
-    /* Plant Sections & Uniform Dossier Cards */
-    .infra-main-wrapper {
-      background: #f8fafc;
+    .plant-detail {
       padding-block: 4.5rem;
+      border-bottom: 1px solid var(--line);
     }
-    .infra-plant-card {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 2.75rem;
-      box-shadow: 0 4px 20px -2px rgba(11, 38, 54, 0.05);
-      margin-bottom: 3.5rem;
-      transition: all 0.3s ease;
-    }
-    .infra-plant-card:last-child {
-      margin-bottom: 0;
-    }
-    .infra-plant-card:hover {
-      box-shadow: 0 12px 32px -4px rgba(11, 38, 54, 0.09);
-      border-color: rgba(62, 192, 207, 0.4);
-    }
-    .infra-grid {
+    .plant-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1fr 1fr;
       gap: 3.5rem;
       align-items: center;
     }
-    .plant-header {
-      margin-bottom: 1.25rem;
-    }
-    .plant-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .plant-title {
-      font-size: 1.85rem;
-      color: var(--navy-deep);
-      font-weight: 700;
-      margin: 0.25rem 0 0.5rem 0;
-      line-height: 1.25;
-    }
-    .plant-address-bar {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.86rem;
-      color: var(--ink-muted);
-      margin-bottom: 1.25rem;
-      background: var(--bg-slate);
-      padding: 4px 12px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--line);
-    }
-    .plant-address-bar svg {
-      width: 14px;
-      height: 14px;
-      color: var(--cyan-primary);
-      flex-shrink: 0;
-    }
-    .plant-desc {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--ink-700);
-      margin-bottom: 1.75rem;
-    }
-    .capability-grid {
+    .plant-feature-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+      margin-top: 1.5rem;
     }
-    .capability-item {
+    .plant-feature {
       background: var(--bg-slate);
       border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 1rem 1.1rem;
-      display: flex;
-      gap: 0.9rem;
-      align-items: flex-start;
-      transition: all 0.25s ease;
-    }
-    .capability-item:hover {
-      background: #ffffff;
-      border-color: var(--cyan-primary);
-      box-shadow: 0 4px 14px rgba(11, 38, 54, 0.06);
-      transform: translateY(-2px);
-    }
-    .cap-icon {
-      width: 38px;
-      height: 38px;
       border-radius: var(--radius-sm);
-      background: #ffffff;
-      border: 1px solid rgba(16, 77, 105, 0.15);
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.25s ease;
-      box-shadow: 0 1px 4px rgba(11, 38, 54, 0.04);
+      padding: 1rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .capability-item:hover .cap-icon {
-      background: var(--navy);
-      color: var(--cyan-vibrant);
+    .plant-feature:hover {
+      transform: translateY(-2px);
       border-color: var(--cyan-primary);
+      box-shadow: 0 4px 12px rgba(11, 38, 54, 0.06);
     }
-    .cap-icon svg {
-      width: 19px;
-      height: 19px;
-    }
-    .cap-text strong {
-      display: block;
+    .plant-feature strong {
+      display: inline-block;
       font-size: 0.88rem;
       color: var(--navy-deep);
-      margin-bottom: 3px;
-      font-weight: 600;
+      font-weight: 700;
     }
-    .cap-text span {
+    .plant-feature span {
       display: block;
-      font-size: 0.78rem;
-      color: var(--ink-600);
+      font-size: 0.8rem;
+      color: var(--ink-muted);
       line-height: 1.45;
     }
-    .plant-visual-box {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      border: 1px solid rgba(62, 192, 207, 0.35);
-      box-shadow: var(--shadow-xl);
-      position: relative;
-      background: var(--navy-deep);
-    }
-    .plant-visual-box img {
-      width: 100%;
-      height: 370px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .plant-visual-box:hover img {
-      transform: scale(1.03);
-    }
-    .plant-status-pill {
-      position: absolute;
-      bottom: 14px;
-      left: 14px;
-      background: rgba(11, 38, 54, 0.92);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(62, 192, 207, 0.45);
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      background: #10b981;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #10b981;
-      animation: pulseGreen 2s infinite;
-    }
-    @keyframes pulseGreen {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.2); }
-    }
-
-    /* Cleanroom Section Uniform Card Styles */
-    .cleanroom-card {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 3rem 2.5rem;
-      box-shadow: 0 4px 20px -2px rgba(11, 38, 54, 0.05);
-      margin-top: 3.5rem;
-    }
-    .cleanroom-specs-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      margin-top: 2.5rem;
-      text-align: left;
-    }
-
-    @media (max-width: 1050px) {
-      .infra-stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .cleanroom-specs-grid { grid-template-columns: repeat(2, 1fr); }
-    }
     @media (max-width: 900px) {
-      .infra-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .capability-grid { grid-template-columns: 1fr; }
-      .infra-plant-card { padding: 1.75rem; }
-      .cleanroom-card { padding: 2rem 1.5rem; }
-    }
-    @media (max-width: 600px) {
-      .infra-stats-grid { grid-template-columns: 1fr; }
-      .cleanroom-specs-grid { grid-template-columns: 1fr; }
+      .plant-grid { grid-template-columns: 1fr; }
+      .plant-feature-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -433,329 +210,168 @@
       </div>
     </section>
 
-    <!-- Key Infrastructure Metrics Bar -->
-    <div class="infra-stats-strip">
-      <div class="shell infra-stats-grid">
-        <div class="infra-stat-item">
-          <div class="infra-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4H2v16z"/>
-            </svg>
-          </div>
-          <div>
-            <strong class="infra-stat-val">2 Dedicated Plants</strong>
-            <span class="infra-stat-lbl">Ranoli (PET) &amp; Padra (HDPE)</span>
-          </div>
-        </div>
-
-        <div class="infra-stat-item">
-          <div class="infra-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div>
-            <strong class="infra-stat-val">Class 100,000</strong>
-            <span class="infra-stat-lbl">ISO 8 Controlled Cleanrooms</span>
-          </div>
-        </div>
-
-        <div class="infra-stat-item">
-          <div class="infra-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <div>
-            <strong class="infra-stat-val">60 Million+ / Year</strong>
-            <span class="infra-stat-lbl">High-Speed Continuous Output</span>
-          </div>
-        </div>
-
-        <div class="infra-stat-item">
-          <div class="infra-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M3 12h3M18 12h3M12 3v3M12 18v3"/>
-            </svg>
-          </div>
-          <div>
-            <strong class="infra-stat-val">100% In-Line QA</strong>
-            <span class="infra-stat-lbl">Optical Vision &amp; Leak Tests</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Content Area: Uniform Plant Dossiers & Cleanroom -->
-    <div class="infra-main-wrapper">
-      <div class="shell">
-
-        <!-- Unit 1 Ranoli Plant Card -->
-        <div class="infra-plant-card">
-          <div class="infra-grid">
-            <div>
-              <div class="plant-header">
-                <div class="plant-badge-row">
-                  <span class="section-kicker" style="margin-bottom:0;">Unit-1 Facility</span>
-                  <span class="topbar-pill" style="color:var(--navy-deep); background:var(--bg-ice); border-color:var(--line-strong);">Ranoli, Vadodara</span>
-                </div>
-                <h2 class="plant-title">Ranoli Plant — PET &amp; ISBM Center</h2>
-                <div class="plant-address-bar">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  <span><strong>F.G. Patel Estate</strong>, Ranoli, Vadodara, Gujarat - 391250</span>
-                </div>
-              </div>
-
-              <p class="plant-desc">
-                Engineered specifically for high-speed primary pharmaceutical packaging. Equipped with Japanese Nissei ASB single-stage Injection Stretch Blow Moulding (ISBM) lines, this unit produces crystal-clear and amber UV-filtered oral syrup bottles from 30ml to 500ml with micron-accurate neck threads.
-              </p>
-
-              <div class="capability-grid">
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M10 2h4v4h-4zM8 6h8v15a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V6z"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>ISBM Single-Stage Moulding</strong>
-                    <span>Japanese ASB lines eliminate preform scuffs and neck seam flash.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="5"/>
-                      <line x1="12" y1="1" x2="12" y2="3"/>
-                      <line x1="12" y1="21" x2="12" y2="23"/>
-                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>UV Amber Shielding</strong>
-                    <span>Spectrophotometer-verified masterbatch blocks UV light up to 450nm.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>Sealed HEPA Conveyors</strong>
-                    <span>Enclosed positive-pressure conveyor tunnels connecting to shrink packers.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>60M Units/Year Output</strong>
-                    <span>Continuous 24/7 automated production ensuring uninterrupted pharma supplies.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="plant-visual-box">
-                <img src="assets/infra-ranoli-isbm.jpg" alt="Ranoli Plant High-Speed PET ISBM Bottling Lines">
-                <div class="plant-status-pill">
-                  <span class="pulse-dot"></span>
-                  Unit-1 Ranoli: High-Speed Nissei ASB Lines
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unit 2 Padra Plant Card -->
-        <div class="infra-plant-card">
-          <div class="infra-grid">
-            <div>
-              <div class="plant-header">
-                <div class="plant-badge-row">
-                  <span class="section-kicker" style="margin-bottom:0;">Unit-2 Facility</span>
-                  <span class="topbar-pill" style="color:var(--navy-deep); background:var(--bg-ice); border-color:var(--line-strong);">Padra, Vadodara</span>
-                </div>
-                <h2 class="plant-title">Padra Plant — HDPE &amp; Closure Systems</h2>
-                <div class="plant-address-bar">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  <span><strong>At-Po, Mujpur, Ta- Padra</strong>, Dist- Vadodara, Gujarat - 391440</span>
-                </div>
-              </div>
-
-              <p class="plant-desc">
-                Specialized center for high-barrier HDPE solid dosage packaging, pill packers, ophthalmic droppers, and child-resistant closures. Housing multi-cavity Extrusion Blow Moulding (EBM) and precision injection presses with in-line camera vision testing and automated wad insertion.
-              </p>
-
-              <div class="capability-grid">
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="6" y="5" width="12" height="16" rx="2"/>
-                      <rect x="8" y="2" width="8" height="3"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>HDPE Solid Packers</strong>
-                    <span>High moisture-barrier containers for tablets, capsules, and nutraceuticals.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="9"/>
-                      <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>CRC Safety Closures</strong>
-                    <span>Certified 28mm, 33mm, 38mm push-and-turn child-resistant two-piece caps.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                      <path d="m9 12 2 2 4-4"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>Induction Liner Wadding</strong>
-                    <span>Automated insertion of foil, foam, and heat-induction wads for zero leakage.</span>
-                  </div>
-                </div>
-
-                <div class="capability-item">
-                  <div class="cap-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 2v6m-4 4h8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8z"/>
-                    </svg>
-                  </div>
-                  <div class="cap-text">
-                    <strong>Calibrated Droppers</strong>
-                    <span>10ml &amp; 15ml ophthalmic dropper plugs with tamper-evident tear rings.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="plant-visual-box">
-                <img src="assets/infra-padra-ebm.jpg" alt="Padra Plant Extrusion Blow Moulding Lines">
-                <div class="plant-status-pill">
-                  <span class="pulse-dot"></span>
-                  Unit-2 Padra: Automated EBM &amp; CRC Moulding
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cleanroom Class 100,000 Engineering Showcase Card -->
-        <div class="cleanroom-card text-center">
-          <span class="section-kicker">Controlled Environments</span>
-          <h2 class="section-title">Class 100,000 (ISO 8) Cleanroom Specifications</h2>
-          <p class="section-subtitle" style="margin-inline:auto; max-width:760px;">
-            Primary pharmaceutical containers must enter filling lines without foreign airborne contaminants, hair, dust, or grease. All bottling lines operate inside certified positive-pressure cleanrooms.
+    <!-- Unit 1 Ranoli Deep Dive -->
+    <section class="plant-detail">
+      <div class="shell plant-grid">
+        <div>
+          <span class="section-kicker">Unit-1 Facility</span>
+          <h2 class="section-title">Ranoli Plant — PET &amp; SBM Center</h2>
+          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-700); margin-bottom:1rem;">
+            Located at the prestigious <strong>F.G. Patel Estate in Ranoli, Vadodara</strong>, Unit-1 is engineered specifically for high-speed pharmaceutical PET oral liquid bottle production.
+          </p>
+          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-600); margin-bottom:1.5rem;">
+            Equipped with multi-cavity Injection Stretch Blow Moulding (ISBM) machines, this plant produces crystal-clear and amber UV-filtered syrup bottles from 30ml to 500ml capacities with flawless neck threads.
           </p>
 
-          <!-- Cleanroom Facility Real Photo Showcase -->
-          <div style="margin-top:2.5rem; border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.35); box-shadow:var(--shadow-xl); position:relative;">
-            <img src="assets/pharma-cleanroom-facility.jpg" alt="Dityaa Bottles Class 100,000 ISO 8 Cleanroom Packaging Facility" style="width:100%; height:420px; object-fit:cover; display:block;">
-            <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 55%, rgba(11,38,54,0.92) 100%);"></div>
-            <div style="position:absolute; bottom:20px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; text-align:left;">
-              <div>
-                <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.5); color:#6ee7b7; padding:4px 12px; border-radius:999px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px;">
-                  <span class="pulse-dot"></span>
-                  ISO 8 Cleanroom Environment
-                </span>
-                <h3 style="color:#ffffff; margin:0; font-size:1.4rem; font-weight:700;">Positive-Pressure Automated Packaging Enclosure</h3>
+          <div class="plant-feature-list">
+            <div class="plant-feature">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v4h-4zM8 6h8v15a1 1 0 01-1 1H9a1 1 0 01-1-1V6z"/></svg>
+                <strong>ISBM Technology</strong>
               </div>
-              <div style="background:rgba(11,38,54,0.85); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); padding:8px 16px; border-radius:var(--radius-md); text-align:right;">
-                <span style="font-size:0.72rem; color:rgba(255,255,255,0.7); display:block;">Airborne Particulate Standard</span>
-                <strong style="color:var(--cyan-vibrant); font-size:0.95rem;">&lt; 3,520,000 particles/m³ @ 0.5µm</strong>
-              </div>
+              <span>Single-stage stretch blow molding for zero preform scratch marks.</span>
             </div>
-          </div>
-
-          <!-- Cleanroom 4 Uniform Capability Specs Cards -->
-          <div class="cleanroom-specs-grid">
-            <div class="capability-item">
-              <div class="cap-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
-                  <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
-                  <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
-                </svg>
+            <div class="plant-feature">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <strong>UV Amber Filtration</strong>
               </div>
-              <div class="cap-text">
-                <strong>HEPA Filtered Air</strong>
-                <span>0.3-micron terminal HEPA filtration with continuous positive pressure differentials.</span>
-              </div>
+              <span>Specialized masterbatch dosing for photo-sensitive oral formulations.</span>
             </div>
-
-            <div class="capability-item">
-              <div class="cap-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-                </svg>
+            <div class="plant-feature">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+                <strong>Automated Conveyors</strong>
               </div>
-              <div class="cap-text">
-                <strong>25+ Air Changes/Hour</strong>
-                <span>Advanced Air Handling Units (AHU) maintaining temperature (22°C ± 2°C) and RH control.</span>
-              </div>
+              <span>Sealed HEPA tunnel conveyors connecting machines to shrink packers.</span>
             </div>
-
-            <div class="capability-item">
-              <div class="cap-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                </svg>
+            <div class="plant-feature">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <strong>Capacity: 60M/Year</strong>
               </div>
-              <div class="cap-text">
-                <strong>Strict Gowning Air-Locks</strong>
-                <span>Double-door interlocking air-showers with mandatory lint-free cleanroom apparel.</span>
-              </div>
-            </div>
-
-            <div class="capability-item">
-              <div class="cap-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                  <line x1="12" y1="22.08" x2="12" y2="12"/>
-                </svg>
-              </div>
-              <div class="cap-text">
-                <strong>Double Poly-Liner Packing</strong>
-                <span>Bottles packed directly into virgin food-grade poly bags and corrugated cartons inside clean air.</span>
-              </div>
+              <span>Continuous high-volume round-the-clock commercial manufacturing.</span>
             </div>
           </div>
         </div>
 
+        <div>
+          <div style="background:var(--navy-deep); border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
+            <img src="assets/infra-ranoli-isbm.jpg" alt="Ranoli Plant High-Speed PET ISBM Bottling Lines" style="width:100%; height:340px; object-fit:cover; display:block;">
+            <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,38,54,0.92); backdrop-filter:blur(8px); border:1px solid rgba(62,192,207,0.4); border-radius:999px; padding:6px 14px; font-size:0.78rem; font-weight:600; color:#fff; display:flex; align-items:center; gap:6px;">
+              <span style="width:8px; height:8px; background:#10b981; border-radius:50%; box-shadow:0 0 8px #10b981;"></span>
+              Unit-1 Ranoli: High-Speed Nissei ASB Lines
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Unit 2 Padra Deep Dive -->
+    <section class="plant-detail" style="background:var(--bg-slate);">
+      <div class="shell plant-grid">
+        <div style="order:2;">
+          <span class="section-kicker">Unit-2 Facility</span>
+          <h2 class="section-title">Padra Plant — HDPE &amp; Closure Systems</h2>
+          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-700); margin-bottom:1rem;">
+            Situated at <strong>At-Po, Mujpur, Ta- Padra, Dist- Vadodara</strong>, Unit-2 is our specialized center for high-barrier HDPE solid dosage bottles, pill packers, ophthalmic droppers, and child-resistant caps (CRC).
+          </p>
+          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-600); margin-bottom:1.5rem;">
+            The Padra plant houses automated Extrusion Blow Moulding (EBM) and high-tonnage precision injection moulding presses with integrated camera leak testing and automated liner wadding.
+          </p>
+
+          <div class="plant-feature-list">
+            <div class="plant-feature" style="background:#ffffff; border:1px solid rgba(16,77,105,0.12); box-shadow:0 2px 8px rgba(11,38,54,0.03);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="12" height="16" rx="2"/><rect x="8" y="2" width="8" height="3"/></svg>
+                <strong>HDPE Solid Packers</strong>
+              </div>
+              <span>Moisture barrier containers for tablets, hard capsules &amp; softgels.</span>
+            </div>
+            <div class="plant-feature" style="background:#ffffff; border:1px solid rgba(16,77,105,0.12); box-shadow:0 2px 8px rgba(11,38,54,0.03);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+                <strong>CRC Safety Caps</strong>
+              </div>
+              <span>Certified 28mm, 33mm, 38mm push-and-turn two-piece closures.</span>
+            </div>
+            <div class="plant-feature" style="background:#ffffff; border:1px solid rgba(16,77,105,0.12); box-shadow:0 2px 8px rgba(11,38,54,0.03);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <strong>Induction Liner Wadding</strong>
+              </div>
+              <span>Automated insertion of foil, foam, and heat-induction wads.</span>
+            </div>
+            <div class="plant-feature" style="background:#ffffff; border:1px solid rgba(16,77,105,0.12); box-shadow:0 2px 8px rgba(11,38,54,0.03);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--cyan-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m-4 4h8v8a2 2 0 01-2 2h-4a2 2 0 01-2-2v-8z"/></svg>
+                <strong>Precision Droppers</strong>
+              </div>
+              <span>10ml &amp; 15ml calibrated nozzle dropper assemblies.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="order:1;">
+          <div style="background:var(--navy-deep); border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
+            <img src="assets/infra-padra-ebm.jpg" alt="Padra Plant Extrusion Blow Moulding Lines" style="width:100%; height:340px; object-fit:cover; display:block;">
+            <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,38,54,0.92); backdrop-filter:blur(8px); border:1px solid rgba(62,192,207,0.4); border-radius:999px; padding:6px 14px; font-size:0.78rem; font-weight:600; color:#fff; display:flex; align-items:center; gap:6px;">
+              <span style="width:8px; height:8px; background:#10b981; border-radius:50%; box-shadow:0 0 8px #10b981;"></span>
+              Unit-2 Padra: Automated EBM &amp; CRC Moulding
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cleanroom Class 100,000 Engineering -->
+    <section style="padding-block:5rem; background:#ffffff;">
+      <div class="shell text-center">
+        <span class="section-kicker">Controlled Environments</span>
+        <h2 class="section-title">Class 100,000 (ISO 8) Cleanroom Specifications</h2>
+        <p class="section-subtitle">
+          Primary pharmaceutical containers must enter filling lines without foreign airborne contaminants, hair, dust, or grease.
+        </p>
+
+        <!-- Cleanroom Facility Real Photo Showcase -->
+        <div style="margin-top:2.5rem; border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
+          <img src="assets/pharma-cleanroom-facility.jpg" alt="Dityaa Bottles Class 100,000 ISO 8 Cleanroom Packaging Facility" style="width:100%; height:420px; object-fit:cover; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 60%, rgba(11,38,54,0.92) 100%);"></div>
+          <div style="position:absolute; bottom:20px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(16,185,129,0.2); border:1px solid rgba(16,185,129,0.5); color:#6ee7b7; padding:4px 10px; border-radius:999px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px;">
+                <span style="width:6px; height:6px; background:#10b981; border-radius:50%;"></span>
+                ISO 8 Cleanroom Environment
+              </span>
+              <h3 style="color:#ffffff; margin:0; font-size:1.35rem; font-weight:700;">Positive-Pressure Automated Packaging Enclosure</h3>
+            </div>
+            <div style="background:rgba(11,38,54,0.85); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); padding:8px 16px; border-radius:var(--radius-md); text-align:right;">
+              <span style="font-size:0.72rem; color:rgba(255,255,255,0.7); display:block;">Airborne Particulate Standard</span>
+              <strong style="color:var(--cyan-vibrant); font-size:0.95rem;">&lt; 3,520,000 particles/m³ @ 0.5µm</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; margin-top:3rem; text-align:left;">
+          <div style="background:var(--bg-slate); border:1px solid var(--line); border-radius:var(--radius-md); padding:1.5rem;">
+            <strong style="color:var(--cyan-primary); font-size:1.1rem; display:block; margin-bottom:0.5rem;">HEPA Filtered Air</strong>
+            <p style="font-size:0.88rem; color:var(--ink-600); margin:0;">0.3-micron terminal HEPA filtration with continuous positive pressure differentials to prevent ingress.</p>
+          </div>
+          <div style="background:var(--bg-slate); border:1px solid var(--line); border-radius:var(--radius-md); padding:1.5rem;">
+            <strong style="color:var(--cyan-primary); font-size:1.1rem; display:block; margin-bottom:0.5rem;">25+ Air Changes/Hour</strong>
+            <p style="font-size:0.88rem; color:var(--ink-600); margin:0;">Advanced Air Handling Units (AHU) maintaining controlled temperature (22°C ± 2°C) and relative humidity.</p>
+          </div>
+          <div style="background:var(--bg-slate); border:1px solid var(--line); border-radius:var(--radius-md); padding:1.5rem;">
+            <strong style="color:var(--cyan-primary); font-size:1.1rem; display:block; margin-bottom:0.5rem;">Strict Gowning Air-Locks</strong>
+            <p style="font-size:0.88rem; color:var(--ink-600); margin:0;">Double-door interlocking air-shower entries with mandatory lint-free cleanroom apparel for all personnel.</p>
+          </div>
+          <div style="background:var(--bg-slate); border:1px solid var(--line); border-radius:var(--radius-md); padding:1.5rem;">
+            <strong style="color:var(--cyan-primary); font-size:1.1rem; display:block; margin-bottom:0.5rem;">Double Poly-Liner Packing</strong>
+            <p style="font-size:0.88rem; color:var(--ink-600); margin:0;">Bottles are packed directly into virgin food-grade poly bags and corrugated cartons inside cleanroom air.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Call to action -->
     <section class="cta-banner">
