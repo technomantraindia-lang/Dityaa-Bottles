@@ -490,7 +490,7 @@ const PRODUCTS_DATA = [
   },
   {
     "id": "DB-PHARM-10",
-    "name": "Kokum & Herbal Tonic PET Bottle",
+    "name": "Herbal Tonic & Health Syrup PET Bottle",
     "category": "pet-bottles",
     "material": "PET (Food & Pharma Monograph Grade)",
     "grade": "FSSAI Compliant / US FDA Grade",
@@ -505,7 +505,7 @@ const PRODUCTS_DATA = [
     "height": "210 mm",
     "diameter": "66 mm",
     "standardPack": "120 Pcs / Carton",
-    "application": "Herbal Health Syrups, Kokum Extracts, Ayurvedic Tonics, Juices",
+    "application": "Herbal Health Syrups, Liquid Phytomedicines, Ayurvedic Tonics, Oral Liquids",
     "closures": "28mm Tamper-Evident Screw Cap, Flip Cap",
     "image": "assets/product-kokum-tonic-bottle.png",
     "badge": "Herbal Tonic",
