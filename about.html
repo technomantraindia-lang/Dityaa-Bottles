@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Dityaa Bottles - Primary Pharmaceutical Packaging</title>
-  <meta name="description" content="Learn about Dityaa Bottles, our manufacturing ethos, cleanroom infrastructure in Ranoli and Padra, and our dedication to reliable polymers for life-saving medicines.">
+  <meta name="description" content="Learn about Dityaa Bottles, our mission, vision, core values, cleanroom manufacturing infrastructure in Ranoli and Padra, and our dedication to reliable polymers for life-saving medicines.">
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     .about-story {
@@ -17,54 +17,412 @@
     }
     .about-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 3.5rem;
       align-items: center;
     }
-    .value-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .value-card {
-      background: var(--bg-slate);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
+    .about-stats-box {
+      background: linear-gradient(145deg, #061b27 0%, #0b2636 100%);
+      border-radius: var(--radius-xl);
       padding: 1.75rem;
+      color: #fff;
+      box-shadow: 0 15px 35px rgba(11, 38, 54, 0.12);
+      border: 1px solid rgba(62, 192, 207, 0.3);
+    }
+    .stats-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+    .stat-mini-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(62, 192, 207, 0.2);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 0.75rem;
+      text-align: center;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
-    .value-card:hover {
+    .stat-mini-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan-vibrant);
+    }
+    .stat-mini-val {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--cyan-vibrant);
+      line-height: 1.15;
+    }
+    .stat-mini-lbl {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.82);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* Mission, Vision & Values Section */
+    .mvv-section {
+      background: linear-gradient(180deg, #061b27 0%, #0b2636 50%, #082130 100%);
+      color: #ffffff;
+      padding-block: 5.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .mvv-section::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(0, 200, 230, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .mvv-section::after {
+      content: "";
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(13, 148, 136, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .mvv-hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+    .mvv-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(62, 192, 207, 0.25);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2rem;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .mvv-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--cyan-vibrant);
+      box-shadow: 0 15px 35px rgba(0, 139, 163, 0.2);
+    }
+    .mvv-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .mvv-badge.vision {
+      background: rgba(0, 200, 230, 0.15);
+      color: var(--cyan-vibrant);
+      border: 1px solid rgba(0, 200, 230, 0.35);
+    }
+    .mvv-badge.mission {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .mvv-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .mvv-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mvv-icon-wrap.vision-icon {
+      background: linear-gradient(135deg, rgba(0, 139, 163, 0.3) 0%, rgba(0, 200, 230, 0.15) 100%);
+      color: var(--cyan-vibrant);
+      border: 1px solid rgba(0, 200, 230, 0.4);
+    }
+    .mvv-icon-wrap.mission-icon {
+      background: linear-gradient(135deg, rgba(13, 148, 136, 0.3) 0%, rgba(52, 211, 153, 0.15) 100%);
+      color: #34d399;
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+    .mvv-card h3 {
+      font-size: 1.45rem;
+      color: #ffffff;
+      margin: 0;
+      font-weight: 700;
+    }
+    .mvv-lead {
+      font-size: 0.98rem;
+      color: #e2e8f0;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .mvv-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .mvv-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+    .mvv-points li svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Core Values 5-card layout */
+    .values-container {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(62, 192, 207, 0.22);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .core-val-card {
+      background: rgba(6, 27, 39, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .core-val-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan-vibrant);
+      background: rgba(6, 27, 39, 0.9);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+    .val-icon-box {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 1rem auto;
+      border-radius: 10px;
+      background: rgba(0, 200, 230, 0.12);
+      color: var(--cyan-vibrant);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 200, 230, 0.25);
+    }
+    .core-val-card h4 {
+      font-size: 1rem;
+      color: #ffffff;
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+    }
+    .core-val-card p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-section {
+      padding-block: 5.5rem;
+      background: #f8fafc;
+    }
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+    .why-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: 0 4px 15px rgba(11, 38, 54, 0.04);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .why-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--cyan-primary);
+      box-shadow: 0 12px 24px rgba(11, 38, 54, 0.08);
+    }
+    .why-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: var(--bg-ice);
+      color: var(--cyan-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .why-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin: 0 0 0.75rem 0;
+    }
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--ink-600);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Journey Milestones Section */
+    .journey-section {
+      padding-block: 5.5rem;
+      background: #ffffff;
+    }
+    .milestones-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .milestone-card {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .milestone-card:hover {
       transform: translateY(-4px);
       border-color: var(--cyan-primary);
     }
-    .value-num {
-      font-size: 1.8rem;
+    .milestone-badge {
+      display: inline-block;
+      font-size: 0.75rem;
       font-weight: 800;
       color: var(--cyan-primary);
-      margin-bottom: 0.5rem;
+      background: rgba(0, 139, 163, 0.1);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
     }
-    .value-card h3 {
+    .milestone-card h3 {
       font-size: 1.1rem;
-      font-weight: 700;
       color: var(--navy-deep);
+      font-weight: 700;
       margin: 0 0 0.5rem 0;
     }
-    .value-card p {
-      font-size: 0.88rem;
+    .milestone-card p {
+      font-size: 0.85rem;
       color: var(--ink-600);
+      line-height: 1.55;
       margin: 0;
-      line-height: 1.5;
     }
-    @media (max-width: 900px) {
+
+    /* Compliance Strip */
+    .compliance-strip-section {
+      background: #f1f5f9;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding-block: 2.5rem;
+    }
+    .compliance-items {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .compliance-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      box-shadow: 0 2px 6px rgba(11, 38, 54, 0.03);
+    }
+    .compliance-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #10b981;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .compliance-check svg {
+      width: 13px;
+      height: 13px;
+    }
+    .compliance-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+      display: block;
+      line-height: 1.25;
+    }
+    .compliance-sub {
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* Operational Tenets / Ethos */
+    .ethos-section {
+      padding-block: 5.5rem;
+      background: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .values-grid { grid-template-columns: repeat(3, 1fr); }
+      .milestones-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-choose-grid { grid-template-columns: repeat(2, 1fr); }
+      .compliance-items { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
-      .value-cards { grid-template-columns: 1fr; }
+      .mvv-hero-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .why-choose-grid { grid-template-columns: 1fr; }
+      .milestones-grid { grid-template-columns: 1fr; }
+      .compliance-items { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .compliance-items { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-      <!-- Top Announcement & Multi-Facility Contact Bar -->
+  <!-- Top Announcement & Multi-Facility Contact Bar -->
   <aside class="topbar" aria-label="Corporate Contacts and Manufacturing Facilities">
     <div class="shell topbar-inner">
       <div class="topbar-left">
@@ -205,30 +563,30 @@
 
   <main>
     <!-- Page Hero -->
-    <section class="page-hero" style="background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%); color:#fff; padding-block:3.5rem 4rem;">
+    <section class="page-hero" style="background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%); color:#fff; padding-block:4rem 4.5rem;">
       <div class="shell">
         <span class="section-kicker white">About Our Company</span>
         <h1 class="section-title white">Reliable Polymers for Life-Saving Products</h1>
         <p class="section-subtitle white">
-          Dityaa Bottles was founded with a singular conviction: primary packaging for pharmaceutical formulations must uphold the exact same purity, precision, and sterility as the life-saving medicine it protects.
+          Dityaa Bottles manufactures world-class primary pharmaceutical packaging across certified Class 100,000 cleanrooms in Vadodara, Gujarat. Dedicated to absolute polymer purity, micron precision, and zero-defect sterility.
         </p>
       </div>
     </section>
 
-    <!-- Company Narrative -->
+    <!-- Company Narrative & Fast Facts -->
     <section class="about-story">
       <div class="shell about-grid">
         <div>
           <span class="section-kicker">Company Profile</span>
           <h2 class="section-title">Finest Manufacturers of Precision Plastic Bottles &amp; Containers</h2>
-          <p style="font-size:1.05rem; line-height:1.7; color:var(--ink-700); margin-bottom:1.5rem;">
-            <strong>DITYAA BOTTLES</strong> is considered in the market to be amongst the finest manufacturers and suppliers of this highly commendable range of Plastic Bottles, Pet Plastic Jars, Pet Bottles, and Plastic Bottle Caps. Our offered range is widely praised for its superior finishing, sturdiness, durability, and resistance to leakage.
+          <p style="font-size:1.05rem; line-height:1.75; color:var(--ink-700); margin-bottom:1.25rem;">
+            <strong>DITYAA BOTTLES</strong> is recognized in the market to be amongst the finest manufacturers and suppliers of high-barrier Plastic Bottles, PET Bottles &amp; Jars, HDPE Packers, and Tamper-Evident Caps. Our manufactured range is praised across the pharmaceutical and healthcare sectors for superior dimensional finishing, wall uniformity, durability, and leak resistance.
           </p>
-          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-600); margin-bottom:1.5rem;">
-            Headquartered at the <strong>Broadway Commercial Hub in Bhayli, Vadodara</strong>, making of this range is done as per the norms and guidelines of the industry utilizing the finest virgin raw materials and modern machinery. The highly futuristic state-of-the-art infrastructural facility at DITYAA BOTTLES has been parted into several specialized units equipped with modern machinery to manage operations in the most efficient and effective manner.
+          <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-600); margin-bottom:1.25rem;">
+            Headquartered at the <strong>Broadway Commercial Hub in Bhayli, Vadodara</strong>, every container is moulded in strict compliance with current Good Manufacturing Practices (cGMP) utilizing only 100% prime virgin resins and modern machinery. Our futuristic manufacturing operations are distributed across specialized plants equipped with single-stage Japanese ISBM lines, automated extrusion blow moulding, and 24/7 HEPA-filtered cleanrooms.
           </p>
           <p style="font-size:0.95rem; line-height:1.7; color:var(--ink-600); margin-bottom:2rem;">
-            Our facility, regularly upgraded, helps us in attaining a leading position in the packaging industry. In addition to this, our ethical work practices, competitive pricing, and client-centric behavior have helped us acquire and retain several highly reputed multinational pharmaceutical and FMCG clients.
+            Regular technological upgrading ensures our clients enjoy the highest quality standards, zero particulate contamination, competitive pricing, and client-centric collaboration — helping us partner with leading multinational pharmaceutical and nutraceutical corporations.
           </p>
 
           <div style="display:flex; gap:1rem; flex-wrap:wrap;">
@@ -239,33 +597,409 @@
 
         <div>
           <div style="border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); margin-bottom:1.5rem; position:relative; background:#ffffff;">
-            <img src="assets/product-dityaa-profile-family.jpg" alt="Dityaa Bottles Complete Manufactured Product Family" style="width:100%; height:240px; object-fit:contain; display:block; padding:12px;">
+            <img src="assets/product-dityaa-profile-family.jpg" alt="Dityaa Bottles Complete Manufactured Product Family" style="width:100%; height:230px; object-fit:contain; display:block; padding:12px;">
             <div style="position:absolute; bottom:10px; left:12px; background:rgba(11,38,54,0.85); backdrop-filter:blur(6px); border:1px solid rgba(62,192,207,0.4); border-radius:999px; padding:4px 12px; font-size:0.75rem; font-weight:600; color:#fff; display:flex; align-items:center; gap:6px;">
               <span style="width:6px; height:6px; background:#10b981; border-radius:50%; box-shadow:0 0 6px #10b981;"></span>
-              Dityaa Bottles Comprehensive Manufactured Lineup
+              Dityaa Bottles Certified Cleanroom Product Lineup
             </div>
           </div>
 
-          <div style="background:var(--navy-deep); border-radius:var(--radius-xl); padding:1.75rem; color:#fff; box-shadow:var(--shadow-xl); border:1px solid rgba(62,192,207,0.3);">
-            <h3 style="color:var(--cyan-vibrant); font-size:1.3rem; margin-top:0;">Our Mission &amp; Vision</h3>
-            <div style="margin-block:1rem; padding-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.15);">
-              <strong style="display:block; color:#fff; font-size:1.05rem; margin-bottom:6px;">Our Vision</strong>
-              <p style="color:rgba(255,255,255,0.8); font-size:0.88rem; line-height:1.6; margin:0;">
-                To become the most dependable and quality-trusted packaging partner for global pharmaceutical, nutraceutical, and commercial brands, delivering leak-resistant, zero-defect containers.
-              </p>
+          <!-- Manufacturing Snapshot Box -->
+          <div class="about-stats-box">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.25rem;">
+              <h3 style="color:var(--cyan-vibrant); font-size:1.15rem; margin:0; font-weight:700;">Manufacturing Snapshot</h3>
+              <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">Vadodara, Gujarat</span>
             </div>
-            <div>
-              <strong style="display:block; color:#fff; font-size:1.05rem; margin-bottom:6px;">Our Promise</strong>
-              <p style="color:rgba(255,255,255,0.8); font-size:0.88rem; line-height:1.6; margin:0;">
-                100% Virgin Resins • Sturdy Leak-Proof Moulding • Market-Leading Pricing • Client-Centric Support.
-              </p>
+            <p style="font-size:0.82rem; color:rgba(255,255,255,0.7); margin:0 0 0.5rem 0;">Direct primary packaging supply from dual state-of-the-art production plants.</p>
+            <div class="stats-mini-grid">
+              <div class="stat-mini-item">
+                <div class="stat-mini-val">100M+</div>
+                <div class="stat-mini-lbl">Annual Containers</div>
+              </div>
+              <div class="stat-mini-item">
+                <div class="stat-mini-val">2 Plants</div>
+                <div class="stat-mini-lbl">Ranoli &amp; Padra</div>
+              </div>
+              <div class="stat-mini-item">
+                <div class="stat-mini-val">Class 100K</div>
+                <div class="stat-mini-lbl">HEPA Cleanrooms</div>
+              </div>
+              <div class="stat-mini-item">
+                <div class="stat-mini-val">100% Virgin</div>
+                <div class="stat-mini-lbl">US FDA 21 CFR Resins</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- DITYAA BOTTLES Ethos (Page 4 from Official PDF) -->
-      <div class="shell" style="margin-top:5rem;">
+    <!-- DEDICATED SECTION: Our Vision, Mission & Core Values -->
+    <section class="mvv-section" id="mission-vision-values">
+      <div class="shell">
+        <div class="text-center" style="max-width:760px; margin:0 auto 3.5rem auto;">
+          <span class="section-kicker" style="color:var(--cyan-vibrant);">Foundational Commitment</span>
+          <h2 class="section-title white" style="margin-bottom:0.75rem;">Our Vision, Mission &amp; Core Values</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; line-height:1.7; margin:0;">
+            Operating with a sacred responsibility: primary packaging for pharmaceutical formulations must safeguard drug efficacy, prevent contamination, and protect patient health worldwide.
+          </p>
+        </div>
+
+        <!-- Vision & Mission Hero Cards -->
+        <div class="mvv-hero-grid">
+          <!-- Vision Card -->
+          <div class="mvv-card">
+            <span class="mvv-badge vision">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              Future Horizon
+            </span>
+            <div class="mvv-card-header">
+              <div class="mvv-icon-wrap vision-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.45rem;">Our Vision</h3>
+                <small style="color:var(--cyan-vibrant); font-size:0.82rem; font-weight:600;">The Global Packaging Benchmark</small>
+              </div>
+            </div>
+            <p class="mvv-lead">
+              To be recognized globally as the most dependable and technically advanced primary pharmaceutical packaging partner, delivering zero-defect polymer containers that preserve medicine potency and protect lives.
+            </p>
+            <ul class="mvv-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Global Pharmaceutical Export Footprint:</strong> Supplying regulated healthcare markets with compliant, audited primary packaging.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Advanced Polymer Science:</strong> Innovating high-barrier, lightweight, and 100% recyclable mono-material PET/HDPE packaging.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Zero-Defect Standard:</strong> Maintaining an unblemished 0.00% batch recall track record across all automated lines.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mission Card -->
+          <div class="mvv-card">
+            <span class="mvv-badge mission">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Operational Purpose
+            </span>
+            <div class="mvv-card-header">
+              <div class="mvv-icon-wrap mission-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.45rem;">Our Mission</h3>
+                <small style="color:#34d399; font-size:0.82rem; font-weight:600;">Precision, Purity &amp; Assurance</small>
+              </div>
+            </div>
+            <p class="mvv-lead">
+              To engineer and deliver precision-moulded PET and HDPE containers, closures, and calibrated dosing cups in certified Class 100,000 cleanrooms — utilizing 100% virgin resins, Japanese ISBM automation, and rigorous testing.
+            </p>
+            <ul class="mvv-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Uncompromising Pharmacopeia Adherence:</strong> Strict compliance with US FDA 21 CFR 177, EP 3.1.5, and USP &lt;661&gt;/&lt;671&gt;.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated Filling Line Efficiency:</strong> Precision dimensional tolerances ensuring zero jamming on high-speed bottling lines.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Turnkey Tooling &amp; Rapid Sampling:</strong> In-house 3D mould engineering, accelerated sampling, and comprehensive batch COA dossiers.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Core Values Sub-Section -->
+        <div class="values-container">
+          <div class="text-center" style="max-width:680px; margin:0 auto 1.5rem auto;">
+            <span class="section-kicker" style="color:var(--cyan-vibrant); font-size:0.75rem;">Guiding Operating Principles</span>
+            <h3 style="color:#ffffff; font-size:1.65rem; margin-top:0.25rem; font-weight:700;">Our Core Values</h3>
+            <p style="color:rgba(255,255,255,0.75); font-size:0.92rem; margin:0;">
+              The foundational ethical and operational pillars that govern every machine, technician, and batch produced at Dityaa Bottles.
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <!-- Value 1 -->
+            <div class="core-val-card">
+              <div class="val-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <h4>Patient Safety First</h4>
+              <p>Every bottle houses life-saving medicines. We maintain a sacred duty to prevent contamination and safeguard public health.</p>
+            </div>
+
+            <!-- Value 2 -->
+            <div class="core-val-card">
+              <div class="val-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <h4>Zero-Defect Quality</h4>
+              <p>Micron-tolerance tooling, optical vision inspection, and vacuum leak testing ensure flawless high-speed packaging.</p>
+            </div>
+
+            <!-- Value 3 -->
+            <div class="core-val-card">
+              <div class="val-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </div>
+              <h4>100% Virgin Resins</h4>
+              <p>Strictly zero regrinds, zero post-consumer waste, and zero heavy metal catalysts. Only prime US FDA medical-grade polymers.</p>
+            </div>
+
+            <!-- Value 4 -->
+            <div class="core-val-card">
+              <div class="val-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h4>Integrity &amp; Trust</h4>
+              <p>Complete batch Certificates of Analysis (COA), open technical facility audits, transparent pricing, and client-first partnership.</p>
+            </div>
+
+            <!-- Value 5 -->
+            <div class="core-val-card">
+              <div class="val-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                </svg>
+              </div>
+              <h4>Circular Sustainability</h4>
+              <p>100% recyclable mono-material PET/HDPE, energy-efficient electric ISBM moulding lines, and zero environmental effluent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Why Leading Pharma Brands Choose Dityaa Bottles -->
+    <section class="why-choose-section" id="why-choose-us">
+      <div class="shell">
+        <div class="text-center" style="max-width:720px; margin:0 auto 2.5rem auto;">
+          <span class="section-kicker">Strategic Advantages</span>
+          <h2 class="section-title">Why Pharmaceutical Manufacturers Choose Dityaa Bottles</h2>
+          <p style="color:var(--ink-muted); font-size:1.02rem; line-height:1.65; margin:0;">
+            Engineered from resin science to cleanroom automation to guarantee drug stability, regulatory compliance, and automated bottling efficiency.
+          </p>
+        </div>
+
+        <div class="why-choose-grid">
+          <!-- Advantage 1 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3>Dual Specialized Plants</h3>
+            <p>Operating two advanced facilities across Vadodara: Unit-1 (Ranoli) for PET ISBM oral liquids and Unit-2 (Padra) for HDPE packers and closures, guaranteeing dual-site supply redundancy.</p>
+          </div>
+
+          <!-- Advantage 2 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3>Certified Class 100,000 Cleanrooms</h3>
+            <p>Manufacturing within certified ISO Class 8 cleanrooms with 24/7 positive air pressure, HEPA filtration, and automated pneumatic resin feeding to eliminate airborne particulates.</p>
+          </div>
+
+          <!-- Advantage 3 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h3>Japanese Nissei ASB Lines</h3>
+            <p>Single-stage Injection Stretch Blow Moulding (ISBM) machines guarantee exceptional wall thickness distribution, crystal-clear glass-like clarity, and perfect 28mm ROPP neck calibration.</p>
+          </div>
+
+          <!-- Advantage 4 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>USP &lt;671&gt; UV &amp; Moisture Barrier</h3>
+            <p>Certified spectral light-transmission protection (&lt;10% transmission up to 450nm) shielding photosensitive syrups and tonics, plus high moisture vapor barrier HDPE for solid oral doses.</p>
+          </div>
+
+          <!-- Advantage 5 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 6 12 12 14 14"/>
+              </svg>
+            </div>
+            <h3>Hermetic Closures &amp; Dosing Cups</h3>
+            <p>Precision-matched child-resistant caps (CRC), tamper-evident pilfer-proof closures, and calibrated dosing cups (2.5ml - 10ml) engineered for flawless sealing without torque jamming.</p>
+          </div>
+
+          <!-- Advantage 6 -->
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3>Complete Audit Dossiers &amp; COA</h3>
+            <p>Every delivery includes lot-specific Certificate of Analysis (COA), migration test certificates, US FDA 21 CFR compliance declarations, and full technical documentation for regulatory audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Quality Accreditations & Standards Strip -->
+    <section class="compliance-strip-section" id="compliance">
+      <div class="shell">
+        <div class="compliance-items">
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">US FDA 21 CFR 177</span>
+              <span class="compliance-sub">Direct Pharma Contact</span>
+            </div>
+          </div>
+
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">USP &lt;661&gt; &amp; &lt;671&gt;</span>
+              <span class="compliance-sub">Barrier &amp; Light Shield</span>
+            </div>
+          </div>
+
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">Class 100,000 Cleanroom</span>
+              <span class="compliance-sub">ISO Class 8 Certified</span>
+            </div>
+          </div>
+
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">EP 3.1.5 Monograph</span>
+              <span class="compliance-sub">European Standards</span>
+            </div>
+          </div>
+
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">FSSAI Compliant</span>
+              <span class="compliance-sub">Food &amp; Nutraceutical Safe</span>
+            </div>
+          </div>
+
+          <div class="compliance-item">
+            <div class="compliance-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <span class="compliance-title">100% Recyclable</span>
+              <span class="compliance-sub">Circular Polymeric Resin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Our Manufacturing Journey & Milestones -->
+    <section class="journey-section" id="milestones">
+      <div class="shell">
+        <div class="text-center" style="max-width:700px; margin:0 auto 2.5rem auto;">
+          <span class="section-kicker">Evolution &amp; Growth</span>
+          <h2 class="section-title">Our Manufacturing Journey</h2>
+          <p style="color:var(--ink-muted); font-size:1rem; line-height:1.65; margin:0;">
+            A steadfast dedication to continuous technological investment, cleanroom automation, and expanded polymer processing capabilities.
+          </p>
+        </div>
+
+        <div class="milestones-grid">
+          <!-- Phase 1 -->
+          <div class="milestone-card">
+            <span class="milestone-badge">Foundation</span>
+            <h3>Strategic Establishment</h3>
+            <p>Founded in Vadodara with the explicit vision to bridge the gap in pharmaceutical primary packaging — creating zero-defect PET bottles for syrup and oral formulations.</p>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="milestone-card">
+            <span class="milestone-badge">Technology</span>
+            <h3>Ranoli Unit-1 &amp; Cleanroom</h3>
+            <p>Commissioned Unit-1 in Ranoli with single-stage Japanese Nissei ASB ISBM machines and certified Class 100,000 HEPA-filtered cleanroom infrastructure.</p>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="milestone-card">
+            <span class="milestone-badge">Expansion</span>
+            <h3>Padra Unit-2 Commissioning</h3>
+            <p>Expanded operations to Unit-2 in Padra, installing automated HDPE extrusion blow moulding lines for moisture-barrier tablet packers and precision closure injection tooling.</p>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="milestone-card">
+            <span class="milestone-badge">Scale &amp; Leadership</span>
+            <h3>100M+ Capacity &amp; Pan-India Reach</h3>
+            <p>Scaled annual capacity beyond 100,000,000 containers, serving over 150+ pharmaceutical corporations across India with rapid just-in-time dispatch logistics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DITYAA BOTTLES Ethos (Operational Tenets from Official Catalog) -->
+    <section class="ethos-section">
+      <div class="shell">
         <div class="text-center">
           <span class="section-kicker">Operational Tenets</span>
           <h2 class="section-title">DITYAA BOTTLES Ethos</h2>
@@ -309,7 +1043,7 @@
       <div class="shell cta-inner">
         <div class="cta-text">
           <h2>Partner with Dityaa Bottles Today</h2>
-          <p>Schedule a visit to our Ranoli or Padra plants, or request an evaluation sample kit for your formulations.</p>
+          <p>Schedule a technical plant audit at our Ranoli or Padra facilities, or request an evaluation sample kit for your formulations.</p>
         </div>
         <div class="cta-actions">
           <button class="btn btn-primary js-open-quote">Request Free Samples</button>
@@ -475,4 +1209,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
