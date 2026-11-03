@@ -62,190 +62,235 @@
       font-weight: 600;
     }
 
-    /* Mission, Vision & Values Section */
-    .mvv-section {
-      background: linear-gradient(180deg, #061b27 0%, #0b2636 50%, #082130 100%);
-      color: #ffffff;
+    /* FOUNDATION SCHEMATIC SECTION (Vision, Mission & Values Architecture) */
+    .foundation-section {
       padding-block: 5.5rem;
+      background: #f8fbfe;
       position: relative;
-      overflow: hidden;
+      border-top: 1px solid rgba(11, 38, 54, 0.06);
+      border-bottom: 1px solid rgba(11, 38, 54, 0.06);
     }
-    .mvv-section::before {
-      content: "";
-      position: absolute;
-      top: -120px;
-      right: -80px;
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, rgba(0, 200, 230, 0.12) 0%, transparent 70%);
-      pointer-events: none;
+    .foundation-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3rem auto;
     }
-    .mvv-section::after {
-      content: "";
-      position: absolute;
-      bottom: -150px;
-      left: -100px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(13, 148, 136, 0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .mvv-hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-      position: relative;
-      z-index: 2;
-    }
-    .mvv-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(62, 192, 207, 0.25);
-      border-radius: var(--radius-xl);
-      padding: 2.25rem 2rem;
-      position: relative;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(8px);
-    }
-    .mvv-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--cyan-vibrant);
-      box-shadow: 0 15px 35px rgba(0, 139, 163, 0.2);
-    }
-    .mvv-badge {
+    .foundation-kicker-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      color: #0284c7;
+      font-size: 0.75rem;
+      font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 1.25rem;
-    }
-    .mvv-badge.vision {
-      background: rgba(0, 200, 230, 0.15);
-      color: var(--cyan-vibrant);
-      border: 1px solid rgba(0, 200, 230, 0.35);
-    }
-    .mvv-badge.mission {
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-    .mvv-card-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
       margin-bottom: 1rem;
     }
-    .mvv-icon-wrap {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
+    .foundation-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: #0b2636;
+      margin: 0 0 0.85rem 0;
+      letter-spacing: -0.02em;
+    }
+    .foundation-subtitle {
+      font-size: 1.02rem;
+      color: #475569;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Central Hub & Branching Schematics */
+    .schematic-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .schematic-hub-container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 3;
+      margin-bottom: -10px;
+    }
+    .schematic-hub {
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px dashed #38bdf8;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.12), inset 0 0 0 6px #f0f9ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    .schematic-hub:hover {
+      transform: scale(1.04);
+    }
+    .schematic-hub-icon {
+      color: #0284c7;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
     }
-    .mvv-icon-wrap.vision-icon {
-      background: linear-gradient(135deg, rgba(0, 139, 163, 0.3) 0%, rgba(0, 200, 230, 0.15) 100%);
-      color: var(--cyan-vibrant);
-      border: 1px solid rgba(0, 200, 230, 0.4);
+    .schematic-hub-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #0b2636;
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      text-transform: uppercase;
     }
-    .mvv-icon-wrap.mission-icon {
-      background: linear-gradient(135deg, rgba(13, 148, 136, 0.3) 0%, rgba(52, 211, 153, 0.15) 100%);
-      color: #34d399;
-      border: 1px solid rgba(52, 211, 153, 0.4);
-    }
-    .mvv-card h3 {
-      font-size: 1.45rem;
-      color: #ffffff;
-      margin: 0;
-      font-weight: 700;
-    }
-    .mvv-lead {
-      font-size: 0.98rem;
-      color: #e2e8f0;
-      line-height: 1.65;
-      margin-bottom: 1.25rem;
-    }
-    .mvv-points {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .mvv-points li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.88rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.5;
-    }
-    .mvv-points li svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      margin-top: 2px;
+    .schematic-hub-sub {
+      font-size: 0.64rem;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 3px;
+      line-height: 1.2;
     }
 
-    /* Core Values 5-card layout */
-    .values-container {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(62, 192, 207, 0.22);
-      border-radius: var(--radius-xl);
-      padding: 2.5rem 2rem;
+    /* SVG Connector Lines */
+    .schematic-connectors-svg {
+      width: 100%;
+      height: 80px;
+      display: block;
+      margin-top: -15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 3-Card Grid */
+    .schematic-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
       position: relative;
       z-index: 2;
     }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
-      margin-top: 2rem;
+    .schematic-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      border-top: 4px solid #008ba3;
+      box-shadow: 0 10px 30px rgba(11, 38, 54, 0.05);
+      padding: 2.25rem 1.85rem 2rem 1.85rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
     }
-    .core-val-card {
-      background: rgba(6, 27, 39, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem 1.25rem;
-      text-align: center;
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    .schematic-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(11, 38, 54, 0.09);
+      border-top-color: #00c8e6;
     }
-    .core-val-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--cyan-vibrant);
-      background: rgba(6, 27, 39, 0.9);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    }
-    .val-icon-box {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 1rem auto;
-      border-radius: 10px;
-      background: rgba(0, 200, 230, 0.12);
-      color: var(--cyan-vibrant);
+
+    /* Terminal circular node on card top border */
+    .schematic-terminal-node {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2.5px solid #008ba3;
+      box-shadow: 0 2px 8px rgba(0, 139, 163, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(0, 200, 230, 0.25);
+      z-index: 4;
     }
-    .core-val-card h4 {
-      font-size: 1rem;
-      color: #ffffff;
-      margin: 0 0 0.5rem 0;
+    .schematic-terminal-node::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #008ba3;
+    }
+
+    /* Top bar inside card */
+    .schematic-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .schematic-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #e0f2fe;
+      color: #008ba3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .schematic-card-tag {
+      font-size: 0.72rem;
       font-weight: 700;
+      color: #0284c7;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
     }
-    .core-val-card p {
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.5;
-      margin: 0;
+    .schematic-card-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0b2636;
+      margin: 0 0 0.75rem 0;
+      letter-spacing: -0.01em;
+    }
+    .schematic-card-desc {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0 0 1.5rem 0;
+    }
+
+    /* Inset Points Container */
+    .schematic-inset-box {
+      background: #f8fafc;
+      border: 1px solid #edf2f7;
+      border-radius: 14px;
+      padding: 1.25rem 1.15rem;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+    .schematic-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: #334155;
+      line-height: 1.55;
+    }
+    .schematic-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #008ba3;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .schematic-point strong {
+      color: #0b2636;
+      font-weight: 700;
     }
 
     /* Strategic Advantages - Split Streamlined Layout (Non-Card) */
@@ -497,7 +542,10 @@
 
 
     @media (max-width: 1024px) {
-      .values-grid { grid-template-columns: repeat(3, 1fr); }
+      .schematic-cards-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .schematic-connectors-svg { display: none; }
+      .schematic-hub-container { margin-bottom: 2rem; }
+      .schematic-terminal-node { display: none; }
       .milestones-grid { grid-template-columns: repeat(2, 1fr); }
       .advantages-split-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .advantages-visual-sticky { position: static; }
@@ -505,8 +553,6 @@
     }
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
-      .mvv-hero-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
       .advantages-split-grid { grid-template-columns: 1fr; }
       .advantages-visual-sticky { position: static; }
       .milestones-grid { grid-template-columns: 1fr; }
@@ -734,165 +780,159 @@
       </div>
     </section>
 
-    <!-- DEDICATED SECTION: Our Vision, Mission & Core Values -->
-    <section class="mvv-section" id="mission-vision-values">
+    <!-- FOUNDATION SCHEMATIC SECTION: Vision, Mission & Core Values -->
+    <section class="foundation-section" id="mission-vision-values">
       <div class="shell">
-        <div class="text-center" style="max-width:760px; margin:0 auto 3.5rem auto;">
-          <span class="section-kicker" style="color:var(--cyan-vibrant);">Foundational Commitment</span>
-          <h2 class="section-title white" style="margin-bottom:0.75rem;">Our Vision, Mission &amp; Core Values</h2>
-          <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; line-height:1.7; margin:0;">
+        <!-- Section Header -->
+        <div class="foundation-header">
+          <span class="foundation-kicker-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Foundation
+          </span>
+          <h2 class="foundation-title">Our Vision, Mission &amp; Core Values</h2>
+          <p class="foundation-subtitle">
             Operating with a sacred responsibility: primary packaging for pharmaceutical formulations must safeguard drug efficacy, prevent contamination, and protect patient health worldwide.
           </p>
         </div>
 
-        <!-- Vision & Mission Hero Cards -->
-        <div class="mvv-hero-grid">
-          <!-- Vision Card -->
-          <div class="mvv-card">
-            <span class="mvv-badge vision">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-              Future Horizon
-            </span>
-            <div class="mvv-card-header">
-              <div class="mvv-icon-wrap vision-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                  <circle cx="12" cy="12" r="3"/>
+        <!-- Schematic Architecture Layout -->
+        <div class="schematic-wrapper">
+          <!-- Central Trust Hub -->
+          <div class="schematic-hub-container">
+            <div class="schematic-hub">
+              <div class="schematic-hub-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                 </svg>
               </div>
-              <div>
-                <h3 style="font-size:1.45rem;">Our Vision</h3>
-                <small style="color:var(--cyan-vibrant); font-size:0.82rem; font-weight:600;">The Global Packaging Benchmark</small>
-              </div>
+              <span class="schematic-hub-title">TRUST DRIVEN</span>
+              <span class="schematic-hub-sub">Precision &amp; Quality</span>
             </div>
-            <p class="mvv-lead">
-              To be recognized globally as the most dependable and technically advanced primary pharmaceutical packaging partner, delivering zero-defect polymer containers that preserve medicine potency and protect lives.
-            </p>
-            <ul class="mvv-points">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Global Pharmaceutical Export Footprint:</strong> Supplying regulated healthcare markets with compliant, audited primary packaging.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Advanced Polymer Science:</strong> Innovating high-barrier, lightweight, and 100% recyclable mono-material PET/HDPE packaging.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#00c8e6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Zero-Defect Standard:</strong> Maintaining an unblemished 0.00% batch recall track record across all automated lines.</span>
-              </li>
-            </ul>
           </div>
 
-          <!-- Mission Card -->
-          <div class="mvv-card">
-            <span class="mvv-badge mission">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              Operational Purpose
-            </span>
-            <div class="mvv-card-header">
-              <div class="mvv-icon-wrap mission-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <circle cx="12" cy="12" r="6"/>
-                  <circle cx="12" cy="12" r="2"/>
-                </svg>
+          <!-- SVG Arching Branching Connectors -->
+          <svg class="schematic-connectors-svg" viewBox="0 0 1100 80" fill="none" preserveAspectRatio="none">
+            <!-- Central drop from hub -->
+            <line x1="550" y1="0" x2="550" y2="25" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 5" />
+            
+            <!-- Left Branch to Card 1 -->
+            <path d="M 550 25 Q 550 55 183 55 V 80" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 5" />
+            
+            <!-- Center Drop to Card 2 -->
+            <line x1="550" y1="25" x2="550" y2="80" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 5" />
+            
+            <!-- Right Branch to Card 3 -->
+            <path d="M 550 25 Q 550 55 917 55 V 80" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 5" />
+          </svg>
+
+          <!-- 3 Connected Cards -->
+          <div class="schematic-cards-grid">
+            <!-- CARD 1: VISION -->
+            <div class="schematic-card">
+              <div class="schematic-terminal-node"></div>
+              
+              <div class="schematic-card-top">
+                <div class="schematic-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <span class="schematic-card-tag">01 / VISION</span>
               </div>
-              <div>
-                <h3 style="font-size:1.45rem;">Our Mission</h3>
-                <small style="color:#34d399; font-size:0.82rem; font-weight:600;">Precision, Purity &amp; Assurance</small>
+
+              <h3 class="schematic-card-title">Our Vision</h3>
+              <p class="schematic-card-desc">
+                To be recognized globally as the most dependable and technically advanced primary pharmaceutical packaging partner, delivering zero-defect polymer containers that preserve medicine potency and protect lives.
+              </p>
+
+              <div class="schematic-inset-box">
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Global Footprint:</strong> Supplying regulated healthcare markets with compliant, audited primary packaging.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Polymer Science:</strong> Innovating high-barrier, lightweight, and 100% recyclable mono-material PET &amp; HDPE.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Zero Recall Rate:</strong> Maintaining an unblemished 0.00% batch recall track record across all lines.</span>
+                </div>
               </div>
             </div>
-            <p class="mvv-lead">
-              To engineer and deliver precision-moulded PET and HDPE containers, closures, and calibrated dosing cups in certified Class 100,000 cleanrooms — utilizing 100% virgin resins, Japanese ISBM automation, and rigorous testing.
-            </p>
-            <ul class="mvv-points">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Uncompromising Pharmacopeia Adherence:</strong> Strict compliance with US FDA 21 CFR 177, EP 3.1.5, and USP &lt;661&gt;/&lt;671&gt;.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Automated Filling Line Efficiency:</strong> Precision dimensional tolerances ensuring zero jamming on high-speed bottling lines.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Turnkey Tooling &amp; Rapid Sampling:</strong> In-house 3D mould engineering, accelerated sampling, and comprehensive batch COA dossiers.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Core Values Sub-Section -->
-        <div class="values-container">
-          <div class="text-center" style="max-width:680px; margin:0 auto 1.5rem auto;">
-            <span class="section-kicker" style="color:var(--cyan-vibrant); font-size:0.75rem;">Guiding Operating Principles</span>
-            <h3 style="color:#ffffff; font-size:1.65rem; margin-top:0.25rem; font-weight:700;">Our Core Values</h3>
-            <p style="color:rgba(255,255,255,0.75); font-size:0.92rem; margin:0;">
-              The foundational ethical and operational pillars that govern every machine, technician, and batch produced at Dityaa Bottles.
-            </p>
-          </div>
-
-          <div class="values-grid">
-            <!-- Value 1 -->
-            <div class="core-val-card">
-              <div class="val-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>
+            <!-- CARD 2: MISSION -->
+            <div class="schematic-card">
+              <div class="schematic-terminal-node"></div>
+              
+              <div class="schematic-card-top">
+                <div class="schematic-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="12" r="2"/>
+                  </svg>
+                </div>
+                <span class="schematic-card-tag">02 / MISSION</span>
               </div>
-              <h4>Patient Safety First</h4>
-              <p>Every bottle houses life-saving medicines. We maintain a sacred duty to prevent contamination and safeguard public health.</p>
+
+              <h3 class="schematic-card-title">Our Mission</h3>
+              <p class="schematic-card-desc">
+                To engineer and deliver precision-moulded PET and HDPE containers, closures, and calibrated dosing cups in certified Class 100,000 cleanrooms using 100% virgin resins and Japanese ISBM automation.
+              </p>
+
+              <div class="schematic-inset-box">
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Pharmacopeia Adherence:</strong> Strict compliance with US FDA 21 CFR 177, EP 3.1.5, and USP &lt;661&gt;/&lt;671&gt;.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Filling Line Speed:</strong> Precision neck calibration ensuring zero jamming on high-speed bottling lines.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Turnkey Tooling:</strong> In-house 3D mould engineering, accelerated sampling, and comprehensive batch COA dossiers.</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Value 2 -->
-            <div class="core-val-card">
-              <div class="val-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
-                </svg>
+            <!-- CARD 3: CORE VALUES -->
+            <div class="schematic-card">
+              <div class="schematic-terminal-node"></div>
+              
+              <div class="schematic-card-top">
+                <div class="schematic-card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                </div>
+                <span class="schematic-card-tag">03 / CORE VALUES</span>
               </div>
-              <h4>Zero-Defect Quality</h4>
-              <p>Micron-tolerance tooling, optical vision inspection, and vacuum leak testing ensure flawless high-speed packaging.</p>
-            </div>
 
-            <!-- Value 3 -->
-            <div class="core-val-card">
-              <div class="val-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                  <polyline points="2 17 12 22 22 17"/>
-                  <polyline points="2 12 12 17 22 12"/>
-                </svg>
-              </div>
-              <h4>100% Virgin Resins</h4>
-              <p>Strictly zero regrinds, zero post-consumer waste, and zero heavy metal catalysts. Only prime US FDA medical-grade polymers.</p>
-            </div>
+              <h3 class="schematic-card-title">Our Values</h3>
+              <p class="schematic-card-desc">
+                The foundational ethical and operational pillars that govern every machine, cleanroom technician, and production batch produced at Dityaa Bottles.
+              </p>
 
-            <!-- Value 4 -->
-            <div class="core-val-card">
-              <div class="val-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
+              <div class="schematic-inset-box">
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Patient Safety &amp; Zero Defects:</strong> Micron-tolerance tooling and leak testing to prevent contamination and safeguard public health.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>100% Virgin Resins:</strong> Strictly zero regrinds, zero post-consumer waste, and certified prime US FDA medical polymers.</span>
+                </div>
+                <div class="schematic-point">
+                  <span class="schematic-dot"></span>
+                  <span><strong>Integrity &amp; Sustainability:</strong> Full batch COA dossiers, open audit access, and 100% recyclable mono-material packaging.</span>
+                </div>
               </div>
-              <h4>Integrity &amp; Trust</h4>
-              <p>Complete batch Certificates of Analysis (COA), open technical facility audits, transparent pricing, and client-first partnership.</p>
-            </div>
-
-            <!-- Value 5 -->
-            <div class="core-val-card">
-              <div class="val-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-                </svg>
-              </div>
-              <h4>Circular Sustainability</h4>
-              <p>100% recyclable mono-material PET/HDPE, energy-efficient electric ISBM moulding lines, and zero environmental effluent.</p>
             </div>
           </div>
         </div>
