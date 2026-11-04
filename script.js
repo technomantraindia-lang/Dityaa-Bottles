@@ -1361,6 +1361,29 @@ const PRODUCTS_DATA = [
     "image": "assets/product-white-toilet-cleaner-bottle.png",
     "badge": "Directional Nozzle",
     "badgeClass": "orange"
+  },
+  {
+    "id": "DB-CAP-14",
+    "name": "Child-Resistant Push & Turn Safety Cap (CRC) for Tablet Bottles",
+    "category": "caps-closures",
+    "material": "Polypropylene (Virgin Pharma Grade PP)",
+    "grade": "US CPSC 16 CFR § 1700.20 / US FDA 21 CFR",
+    "capacity": "28mm / 33mm / 38mm",
+    "capacityValue": 38,
+    "overflow": "Universal Solid Dosage Fit",
+    "neckSize": "28 mm / 33 mm / 38 mm Push-Turn",
+    "neckValue": 38,
+    "shape": "Two-Piece Child-Lock Push & Turn",
+    "color": "Pharma White (Custom Colors Available)",
+    "weight": "5.6 g (Average)",
+    "height": "20 mm",
+    "diameter": "38 mm",
+    "standardPack": "1500 Pcs / Carton",
+    "application": "Solid Dosage Tablet Containers, Pill Packers, Toxic Chemicals & Controlled Oral Drugs",
+    "closures": "Push-Down & Turn Child-Proof Lock with Induction Heat Seal (IHS) Foil Liner",
+    "image": "assets/product-cap-crc.png",
+    "badge": "Child-Lock CRC",
+    "badgeClass": "teal"
   }
 ];
 
