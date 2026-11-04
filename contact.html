@@ -137,6 +137,12 @@
     @media (max-width: 950px) {
       .contact-layout { grid-template-columns: 1fr; }
     }
+    @media (max-width: 640px) {
+      .contact-layout { padding-block: 2.5rem; gap: 2rem; }
+      .contact-form-box { padding: 1.25rem 1rem; }
+      .contact-form-actions { flex-direction: column; }
+      .contact-form-actions .btn { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -346,7 +352,7 @@
               </div>
             </div>
 
-            <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+            <div class="contact-form-actions" style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
               <button type="submit" class="btn btn-primary" style="flex:1; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
                 <span>Submit Inquiry via Email</span>
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -486,7 +492,7 @@
     <div class="shell footer-top">
       <div class="footer-brand">
         <a class="footer-brand-logo" href="index.html" aria-label="Dityaa Bottles Homepage">
-          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products" loading="lazy" decoding="async">
         </a>
         <p class="footer-bio">
           Precision pharmaceutical packaging manufactured with certified polymers in Vadodara, Gujarat.

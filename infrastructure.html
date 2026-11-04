@@ -52,8 +52,12 @@
       line-height: 1.45;
     }
     @media (max-width: 900px) {
-      .plant-grid { grid-template-columns: 1fr; }
-      .plant-feature-list { grid-template-columns: 1fr; }
+      .plant-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .plant-feature-list { grid-template-columns: 1fr !important; }
+      .plant-grid img { height: 260px !important; }
+      .plant-detail { padding-block: 3rem !important; }
+      .plant-grid div[style*="order:2"] { order: 0 !important; }
+      .cleanroom-showcase-img { height: 250px !important; }
     }
   </style>
 </head>
@@ -256,7 +260,7 @@
 
         <div>
           <div style="background:var(--navy-deep); border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
-            <img src="assets/infra-ranoli-isbm.jpg" alt="Ranoli Plant High-Speed PET ISBM Bottling Lines" style="width:100%; height:460px; object-fit:cover; object-position:center; display:block;">
+            <img src="assets/infra-ranoli-isbm.jpg" alt="Ranoli Plant High-Speed PET ISBM Bottling Lines" loading="lazy" decoding="async" style="width:100%; height:460px; object-fit:cover; object-position:center; display:block;">
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,38,54,0.92); backdrop-filter:blur(8px); border:1px solid rgba(62,192,207,0.4); border-radius:999px; padding:6px 14px; font-size:0.78rem; font-weight:600; color:#fff; display:flex; align-items:center; gap:6px;">
               <span style="width:8px; height:8px; background:#10b981; border-radius:50%; box-shadow:0 0 8px #10b981;"></span>
               Unit-1 Ranoli: High-Speed Nissei ASB Lines
@@ -313,7 +317,7 @@
 
         <div style="order:1;">
           <div style="background:var(--navy-deep); border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
-            <img src="assets/infra-padra-ebm.jpg" alt="Padra Plant Extrusion Blow Moulding Lines" style="width:100%; height:460px; object-fit:cover; object-position:center; display:block;">
+            <img src="assets/infra-padra-ebm.jpg" alt="Padra Plant Extrusion Blow Moulding Lines" loading="lazy" decoding="async" style="width:100%; height:460px; object-fit:cover; object-position:center; display:block;">
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,38,54,0.92); backdrop-filter:blur(8px); border:1px solid rgba(62,192,207,0.4); border-radius:999px; padding:6px 14px; font-size:0.78rem; font-weight:600; color:#fff; display:flex; align-items:center; gap:6px;">
               <span style="width:8px; height:8px; background:#10b981; border-radius:50%; box-shadow:0 0 8px #10b981;"></span>
               Unit-2 Padra: Automated EBM &amp; CRC Moulding
@@ -334,7 +338,7 @@
 
         <!-- Cleanroom Facility Real Photo Showcase -->
         <div style="margin-top:2.5rem; border-radius:var(--radius-xl); overflow:hidden; border:1px solid rgba(62,192,207,0.3); box-shadow:var(--shadow-xl); position:relative;">
-          <img src="assets/pharma-cleanroom-facility.jpg" alt="Dityaa Bottles Class 100,000 ISO 8 Cleanroom Packaging Facility" style="width:100%; height:420px; object-fit:cover; display:block;">
+          <img class="cleanroom-showcase-img" src="assets/pharma-cleanroom-facility.jpg" alt="Dityaa Bottles Class 100,000 ISO 8 Cleanroom Packaging Facility" loading="lazy" decoding="async" style="width:100%; height:420px; object-fit:cover; display:block;">
           <div style="position:absolute; inset:0; background:linear-gradient(180deg, transparent 60%, rgba(11,38,54,0.92) 100%);"></div>
           <div style="position:absolute; bottom:20px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
             <div>
@@ -392,7 +396,7 @@
     <div class="shell footer-top">
       <div class="footer-brand">
         <a class="footer-brand-logo" href="index.html" aria-label="Dityaa Bottles Homepage">
-          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products">
+          <img class="footer-logo-img" src="assets/dityaa-logo-footer.png" alt="Dityaa Bottles - Reliable Polymers for Life-Saving Products" loading="lazy" decoding="async">
         </a>
         <p class="footer-bio">
           Precision pharmaceutical packaging manufactured with certified polymers in Vadodara, Gujarat.
