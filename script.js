@@ -1375,6 +1375,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initWhatsAppQuoteForm();
   initSmoothScroll();
+  initScrollAnimations();
 });
 
 /* ── Hero Animated Counters ── */
@@ -1831,6 +1832,9 @@ function initProductCatalog() {
     }
 
     bindProductActions();
+    if (typeof initScrollAnimations === "function") {
+      initScrollAnimations();
+    }
   }
 
   // Slider Navigation Arrows
@@ -2097,6 +2101,9 @@ function initPackagingConfigurator() {
         </div>
       `;
       bindProductActions();
+    if (typeof initScrollAnimations === "function") {
+      initScrollAnimations();
+    }
     }
   }
 
@@ -2289,4 +2296,119 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ── Global Scroll & Section Entrance Animations ── */
+function initScrollAnimations() {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  document.body.classList.add("js-animate");
+
+  const targets = [];
+
+  // 1. All Section Headers (Kick-off titles, subtitles across all pages)
+  document.querySelectorAll("section:not(.page-hero) .section-kicker, section:not(.page-hero) .section-title, section:not(.page-hero) .section-subtitle, .intro-header > *").forEach(el => {
+    if (!el.classList.contains("reveal-init")) {
+      el.classList.add("reveal-init");
+      targets.push(el);
+    }
+  });
+
+  // 2. Multi-item grids & lists (with auto-stagger delays)
+  const gridSelectors = [
+    ".plant-feature-list",
+    ".advantages-flow",
+    ".category-grid",
+    ".products-grid",
+    ".location-cards-stack",
+    ".footer-facilities",
+    ".milestone-grid",
+    ".cleanroom-specs-grid",
+    ".plant-grid",
+    ".company-profile-grid",
+    ".cert-grid",
+    ".faq-list",
+    ".stats-bar",
+    ".trust-bar",
+    ".schematic-cards"
+  ];
+
+  gridSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(container => {
+      const children = Array.from(container.children);
+      children.forEach((child, idx) => {
+        if (!child.classList.contains("reveal-init")) {
+          child.classList.add("reveal-init");
+          const delay = Math.min((idx % 6) * 90, 540);
+          child.style.setProperty("--reveal-delay", `${delay}ms`);
+          targets.push(child);
+        }
+      });
+    });
+  });
+
+  // 3. Standalone major cards, forms, and feature sections
+  const cardSelectors = [
+    ".contact-form-box",
+    ".loc-card-interactive",
+    ".plant-feature",
+    ".schematic-hub",
+    ".schematic-card",
+    ".advantages-flow-item",
+    ".advantages-visual",
+    ".cta-banner",
+    ".configurator-box",
+    ".product-card",
+    ".category-card",
+    ".facility-card"
+  ];
+
+  cardSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      if (!el.classList.contains("reveal-init")) {
+        el.classList.add("reveal-init");
+        targets.push(el);
+      }
+    });
+  });
+
+  // 4. Facility and Production Photo Showcases (Scale & Depth animation)
+  document.querySelectorAll(".plant-grid > div > div[style*='border-radius'], .intro-visual, .facility-showcase-visual, .cleanroom-photo-box").forEach(el => {
+    if (!el.classList.contains("reveal-init")) {
+      el.classList.add("reveal-init", "reveal-scale");
+      targets.push(el);
+    }
+  });
+
+  // IntersectionObserver to reveal on scroll
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: "0px 0px -30px 0px",
+      threshold: 0.05
+    });
+
+    targets.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      // If already visible in initial viewport, reveal smoothly with slight delay
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        setTimeout(() => {
+          el.classList.add("is-revealed");
+        }, 60);
+      } else {
+        observer.observe(el);
+      }
+    });
+  } else {
+    targets.forEach(el => el.classList.add("is-revealed"));
+  }
 }

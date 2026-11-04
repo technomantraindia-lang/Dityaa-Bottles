@@ -4278,3 +4278,94 @@ button {
     height: 28px;
   }
 }
+
+/* ==========================================================================
+   GLOBAL ENTRANCE & SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+
+/* Page Hero Initial Entrance Animations (Runs immediately on page load) */
+.page-hero .section-kicker,
+.page-hero .hero-badge {
+  opacity: 0;
+  animation: heroFadeSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.page-hero .section-title,
+.page-hero h1 {
+  opacity: 0;
+  animation: heroFadeSlideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards;
+}
+
+.page-hero .section-subtitle,
+.page-hero p.hero-desc {
+  opacity: 0;
+  animation: heroFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+
+.page-hero .hero-actions,
+.page-hero .hero-cta-group {
+  opacity: 0;
+  animation: heroFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards;
+}
+
+@keyframes heroFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Reveal Base Class */
+body.js-animate .reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Staggered Delay for Child Items in Grids */
+body.js-animate .reveal-init[style*="--reveal-delay"] {
+  transition-delay: var(--reveal-delay);
+}
+
+/* Directional and Scale Variants */
+body.js-animate .reveal-init.reveal-left {
+  transform: translateX(-32px);
+}
+
+body.js-animate .reveal-init.reveal-right {
+  transform: translateX(32px);
+}
+
+body.js-animate .reveal-init.reveal-scale {
+  transform: scale(0.95) translateY(20px);
+}
+
+/* Active / In-View State */
+body.js-animate .reveal-init.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Clean fallback if prefers-reduced-motion is enabled */
+@media (prefers-reduced-motion: reduce) {
+  .page-hero .section-kicker,
+  .page-hero .section-title,
+  .page-hero .section-subtitle,
+  .page-hero .hero-badge,
+  .page-hero h1,
+  .page-hero p.hero-desc,
+  .page-hero .hero-actions,
+  .page-hero .hero-cta-group,
+  body.js-animate .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
