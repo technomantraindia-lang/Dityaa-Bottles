@@ -2094,7 +2094,7 @@ function initPackagingConfigurator() {
               Enquire This Setup
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <a class="btn btn-whatsapp" href="https://wa.me/919428027052?text=${encodeURIComponent('Hello Dityaa Bottles team, I configured packaging on your website: ' + recTitle + '. Please provide quotation and sample specs.')}" target="_blank" rel="noopener">
+            <a class="btn btn-whatsapp" href="https://wa.me/919909967326?text=${encodeURIComponent('Hello Dityaa Bottles team, I configured packaging on your website: ' + recTitle + '. Please provide quotation and sample specs.')}" target="_blank" rel="noopener">
               WhatsApp Quote
             </a>
           </div>
@@ -2247,7 +2247,7 @@ function initWhatsAppQuoteForm() {
 *Estimated Quantity:* ${quantity}
 *Project Specifications:* ${notes}`;
 
-    const waUrl = `https://wa.me/919428027052?text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://wa.me/919909967326?text=${encodeURIComponent(waText)}`;
 
     // Close modal
     const modal = document.getElementById("quoteModal");
